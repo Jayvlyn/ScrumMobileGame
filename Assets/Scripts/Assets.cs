@@ -2,7 +2,7 @@ using UnityEngine;
 
 /*
  * Global Asset references
- * Edit Asset references in the prefab Assets/AssetRefs
+ * Edit Asset references in the prefab Resources/AssetRefs
  * */
 public class Assets : MonoBehaviour
 {
