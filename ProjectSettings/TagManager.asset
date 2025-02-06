@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PlayerBall
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,12 +13,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Flipper
+  - Level
+  - Ball
+  - Enemy
+  - Pickup
+  - Bumper
   - 
   - 
   - 
