@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource), typeof(Animator))]
@@ -10,8 +9,6 @@ public class Bumper : MonoBehaviour
     float bounceForce = 10;
     [SerializeField]
     AudioClip[] bumpSounds;
-    [SerializeField]
-    List<string> allowedTags = new List<string>() { "PlayerBall" };
 
     private AudioSource audioSource;
     private Animator animator;
@@ -25,19 +22,16 @@ public class Bumper : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // If any object with the tag collides, it will reflect in correct direction. Use bounceForce to change the force added from reflecting.
-        foreach (string tag in allowedTags)
+        if (collision.gameObject.GetComponent<BallBase>())
         {
-            if (collision.gameObject.tag == tag && collision.rigidbody)
-            {
-                Vector2 velocity = collision.relativeVelocity;
-                Vector2 normal = -collision.GetContact(0).normal;
-                Vector2 reflect = Vector2.Reflect(velocity, normal);
+            Vector2 velocity = collision.relativeVelocity;
+            Vector2 normal = -collision.GetContact(0).normal;
+            Vector2 reflect = Vector2.Reflect(velocity, normal);
 
-                collision.rigidbody.AddForce(reflect * bounceForce, ForceMode2D.Impulse);
+            collision.rigidbody.AddForce(reflect * bounceForce, ForceMode2D.Impulse);
 
-                if (bumpSounds.Length > 0) audioSource.PlayOneShot(bumpSounds[0]);
-                //TODO: Play animation, add sounds.
-            }
+            if (bumpSounds.Length > 0) audioSource.PlayOneShot(bumpSounds[0]);
+            //TODO: Play animation, add sounds.
         }
     }
 }
