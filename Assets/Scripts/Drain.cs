@@ -13,7 +13,7 @@ public class Drain : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if ((enemyLayer & (1 << collision.gameObject.layer)) != 0) // is gameobject layer in enemy layer?
+		if (enemyLayer.value == collision.gameObject.layer) // is gameobject layer in enemy layer?
 		{ // Collision is enemy
 			int damage = 1;
 
@@ -26,7 +26,7 @@ public class Drain : MonoBehaviour
 
 			GameManager.instance.DamagePlayer(damage);
 		}
-		else if ((ballLayer & (1 << collision.gameObject.layer)) != 0) // is gameobject layer in ball layer?
+		else if (ballLayer.value == collision.gameObject.layer) // is gameobject layer in ball layer?
 		{ // Collision is ball
 			GameManager.instance.OnBallDrained(collision.gameObject);
 		}
