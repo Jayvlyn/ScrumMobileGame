@@ -53,7 +53,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		Vector3 globalMousePos;
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
 		{
-			rt.position = new Vector3(m_DraggingIcon.transform.position.x, globalMousePos.y);
+			rt.position = new Vector3(gameObject.transform.position.x, globalMousePos.y);
 			rt.rotation = m_DraggingPlane.rotation;
 		}
 	}

@@ -51,5 +51,17 @@ public class FlipperController : MonoBehaviour
 		hinge.motor = newMotor;
 	}
 
-    
+    public void UIButtonClick()
+	{
+		StartCoroutine(Flip());
+	}
+
+
+	IEnumerator Flip()
+	{
+		Activate();
+		yield return new WaitForSeconds(.3f);
+		Deactivate();
+	}
+
 }
