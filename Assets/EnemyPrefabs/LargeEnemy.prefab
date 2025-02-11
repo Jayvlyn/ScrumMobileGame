@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3006665632187734895}
   - component: {fileID: 5485868971495818124}
   - component: {fileID: 4978131063799829437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LargeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -167,7 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   damage: 4
-  paths:
-  - {fileID: 0}
   acceleration: 0.25
   impulse: 2

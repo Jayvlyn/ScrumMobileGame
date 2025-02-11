@@ -50,6 +50,10 @@ MonoBehaviour:
   rb: {fileID: 4523993990627889379}
   col: {fileID: 184908848539204480}
   spriteRenderer: {fileID: 1928703858692697312}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  damage: 10
 --- !u!212 &1928703858692697312
 SpriteRenderer:
   m_ObjectHideFlags: 0
