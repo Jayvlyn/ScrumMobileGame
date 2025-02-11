@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 120046270}
   - component: {fileID: 120046269}
   - component: {fileID: 120046268}
+  - component: {fileID: 120046271}
   m_Layer: 5
   m_Name: FlipperL
   m_TagString: Untagged
@@ -288,19 +289,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 120046269}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1134438120}
-        m_TargetAssemblyTypeName: FlipperController, Assembly-CSharp
-        m_MethodName: UIButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &120046269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +328,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120046266}
   m_CullTransparentMesh: 1
+--- !u!114 &120046271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120046266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a23b1316a73a240bd8e4861ab93c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activate: {fileID: 11400000, guid: 6bba2c5b64d3542478f4f31d15f9e078, type: 2}
+  deactivate: {fileID: 11400000, guid: 4450bb4e6543e0649a8df4016b3d284f, type: 2}
 --- !u!1 &120396789
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +675,8 @@ GameObject:
   - component: {fileID: 310518872}
   - component: {fileID: 310518871}
   - component: {fileID: 310518870}
+  - component: {fileID: 310518877}
+  - component: {fileID: 310518876}
   m_Layer: 0
   m_Name: FlipperR
   m_TagString: Untagged
@@ -863,6 +868,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 202.915}
+--- !u!114 &310518876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310518869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b663e92038a8fc847b65ab6d544e0e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 0a2b7766d1c76f2438d1101d7d86a7c5, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 310518872}
+        m_TargetAssemblyTypeName: FlipperController, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &310518877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310518869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b663e92038a8fc847b65ab6d544e0e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 44e3cce5c44e9884a9cb5412765571c8, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 310518872}
+        m_TargetAssemblyTypeName: FlipperController, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &316479342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,6 +1793,8 @@ GameObject:
   - component: {fileID: 1134438120}
   - component: {fileID: 1134438119}
   - component: {fileID: 1134438118}
+  - component: {fileID: 1134438125}
+  - component: {fileID: 1134438124}
   m_Layer: 0
   m_Name: FlipperL
   m_TagString: Untagged
@@ -1923,6 +1986,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 335}
+--- !u!114 &1134438124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134438117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b663e92038a8fc847b65ab6d544e0e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 4450bb4e6543e0649a8df4016b3d284f, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1134438120}
+        m_TargetAssemblyTypeName: FlipperController, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1134438125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134438117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b663e92038a8fc847b65ab6d544e0e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6bba2c5b64d3542478f4f31d15f9e078, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1134438120}
+        m_TargetAssemblyTypeName: FlipperController, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1230873607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,6 +2723,7 @@ GameObject:
   - component: {fileID: 1747976155}
   - component: {fileID: 1747976154}
   - component: {fileID: 1747976153}
+  - component: {fileID: 1747976156}
   m_Layer: 5
   m_Name: FlipperR
   m_TagString: Untagged
@@ -2674,19 +2794,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747976154}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 310518872}
-        m_TargetAssemblyTypeName: FlipperController, Assembly-CSharp
-        m_MethodName: UIButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1747976154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,6 +2833,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747976151}
   m_CullTransparentMesh: 1
+--- !u!114 &1747976156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747976151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a23b1316a73a240bd8e4861ab93c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activate: {fileID: 11400000, guid: 44e3cce5c44e9884a9cb5412765571c8, type: 2}
+  deactivate: {fileID: 11400000, guid: 0a2b7766d1c76f2438d1101d7d86a7c5, type: 2}
 --- !u!1 &1863666155
 GameObject:
   m_ObjectHideFlags: 0
