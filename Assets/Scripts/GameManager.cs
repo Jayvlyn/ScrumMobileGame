@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	public ObjectPool ballPool;
+	public Drain drain;
 	[SerializeField] private Transform ballStart;
 
 	private int score = 0;

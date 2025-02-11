@@ -1,6 +1,4 @@
-using UnityEditor.PackageManager;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -55,7 +53,16 @@ public class EnemyBase : MonoBehaviour
 
 	private void LookAt2D()
 	{
-		Vector2 direction = new Vector2(path.points[pathIndex].position.x - transform.position.x, path.points[pathIndex].position.y - transform.position.y);
+		Vector2 direction;
+		if (pathIndex >= path.points.Length) // no points left
+		{
+			direction = GameManager.instance.drain.transform.position - transform.position;
+		}
+		else // use next point
+		{
+			direction = path.points[pathIndex].position - transform.position;
+		}
+
 		float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 		transform.eulerAngles = new Vector3(0, 0, rotation);
 	}

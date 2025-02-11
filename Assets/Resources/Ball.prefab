@@ -54,7 +54,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
-  damage: 10
+  damage: 1000
 --- !u!212 &1928703858692697312
 SpriteRenderer:
   m_ObjectHideFlags: 0

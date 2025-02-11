@@ -7,12 +7,17 @@ public class BallBase : MonoBehaviour
 	[SerializeField] private SpriteRenderer spriteRenderer;
 
 	[Header("Enemy Stuff")]
-	[SerializeField] LayerMask enemyLayer;
 	[SerializeField] float damage;
+	LayerMask enemyLayer;
 
 	public void OnBallSplit() // Listen for ball split event
 	{
 		// Spawn new ball nearby (use ball pool)
+	}
+
+	private void Start()
+	{
+		enemyLayer = LayerMask.NameToLayer("Enemy");
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
