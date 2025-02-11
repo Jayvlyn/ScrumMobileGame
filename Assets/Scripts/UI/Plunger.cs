@@ -1,3 +1,4 @@
+using GameEvents;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,6 +10,10 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 	private GameObject m_DraggingIcon;
 	private RectTransform m_DraggingPlane;
+
+	public FloatEvent onPlungerReleased;
+
+	[Range(10,100)]public float power = 10;
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
@@ -53,7 +58,9 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		Vector3 globalMousePos;
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
 		{
-			rt.position = new Vector3(gameObject.transform.position.x, globalMousePos.y);
+			float newYPos = Mathf.Clamp(globalMousePos.y, -10000, transform.position.y);
+
+			rt.position = new Vector3(gameObject.transform.position.x, newYPos);
 			rt.rotation = m_DraggingPlane.rotation;
 		}
 	}
@@ -61,9 +68,9 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 	public void OnEndDrag(PointerEventData eventData)
 	{
 
-		float outputForce = gameObject.transform.position.y - m_DraggingIcon.transform.position.y;
+		float outputForce = (gameObject.transform.position.y - m_DraggingIcon.transform.position.y) * power;
 
-		Debug.Log("BallForce = " + outputForce);
+		onPlungerReleased.Raise(outputForce);
 
 		if (m_DraggingIcon != null)
 			Destroy(m_DraggingIcon);
