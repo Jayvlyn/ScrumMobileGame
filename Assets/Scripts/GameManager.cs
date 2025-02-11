@@ -17,11 +17,24 @@ public class GameManager : MonoBehaviour
 		OnLevelStart();
 	}
 
+	private void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.B))
+		{
+			SpawnBallInStart();
+		}
+	}
+
+	public void SpawnBallInStart()
+	{
+		GameObject ball = ballPool.ActivateObject();
+		ballPool.SetObjectPosition(ball, ballStart.position);
+	}
+
 	private void SetupBall()
 	{
 		ballPool.DeactivateAll();
-		GameObject ball = ballPool.ActivateObject();
-		ballPool.SetObjectPosition(ball, ballStart.position);
+		SpawnBallInStart();
 	}
 
 	public void AddScore(int points)
