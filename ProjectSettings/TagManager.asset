@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - PlayerBall
-  tags: []
+  - PathPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
