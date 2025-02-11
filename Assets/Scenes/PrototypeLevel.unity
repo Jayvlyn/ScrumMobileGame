@@ -186,7 +186,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &22787161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1094,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,10 +1211,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384a5ac5185d8c046af3cabbe9e17eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+  damage: 1
   paths:
   - {fileID: 1012560722}
-  acceleration: 20
-  maxSpeed: 1
+  acceleration: 0.5
+  impulse: 2
 --- !u!50 &633144320
 Rigidbody2D:
   serializedVersion: 5
@@ -1342,7 +1344,7 @@ Transform:
   m_GameObject: {fileID: 633144318}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.84, y: -7.09, z: 0}
+  m_LocalPosition: {x: -4.83, y: -10.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1415,7 +1417,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &774059195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1485,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &801029245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,7 +1955,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &964651294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,7 +2218,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &1588197970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,7 +2554,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &1977909296
 GameObject:
   m_ObjectHideFlags: 0

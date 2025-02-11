@@ -4,11 +4,19 @@ using static UnityEngine.GraphicsBuffer;
 
 public class EnemyBase : MonoBehaviour
 {
+	[Header("Health Stuff")]
+	[SerializeField] float health;
+	[SerializeField] float damage;
+
+	[Header("Path Stuff")]
 	[SerializeField] Path[] paths;
 	private Path path;
 	private int pathIndex = 0;
+
+	[Header("Movement Stuff")]
 	[SerializeField] float acceleration;
-	[SerializeField] float maxSpeed;
+	[SerializeField] float impulse;
+
 	private Rigidbody2D rb;
 	private Collider2D alrCollided;
 
@@ -17,13 +25,12 @@ public class EnemyBase : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 		int r = Random.Range(0, paths.Length);
 		path = paths[r];
+		LookAt2D();
+		rb.AddForce(transform.right * impulse, ForceMode2D.Impulse);
 	}
 
 	private void Update()
 	{
-		Vector2 direction = new Vector2(path.points[pathIndex].position.x - transform.position.x, path.points[pathIndex].position.y - transform.position.y);
-		float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-		transform.eulerAngles = new Vector3(0, 0, rotation);
 		MoveEnemy();
 	}
 
@@ -34,16 +41,20 @@ public class EnemyBase : MonoBehaviour
 			pathIndex++;
 			rb.linearVelocity = Vector2.zero;
 			alrCollided = collision;
+			LookAt2D();
+			rb.AddForce(transform.right * impulse, ForceMode2D.Impulse);
 		}
 	}
 
 	private void MoveEnemy()
 	{
-		rb.AddForce(transform.right * acceleration);
+			rb.AddForce(transform.right * acceleration);
+	}
 
-		//if (Mathf.Abs(rb.linearVelocity.x) > maxSpeed)
-		//{
-		//	rb.linearVelocity = new Vector2(Mathf.Sign(rb.linearVelocity.x) * maxSpeed, rb.linearVelocity.y);
-		//}
+	private void LookAt2D()
+	{
+		Vector2 direction = new Vector2(path.points[pathIndex].position.x - transform.position.x, path.points[pathIndex].position.y - transform.position.y);
+		float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+		transform.eulerAngles = new Vector3(0, 0, rotation);
 	}
 }
