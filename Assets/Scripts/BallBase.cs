@@ -21,6 +21,8 @@ public class BallBase : MonoBehaviour
 		{
 			collision.GetComponent<EnemyBase>().ApplyDamage(damage);
 		}
+	}
+
 	public void ChangeScale(float size)
 	{
 		GetComponent<Transform>().localScale += new Vector3( size, size, size );
