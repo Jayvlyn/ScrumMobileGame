@@ -10,4 +10,9 @@ public class BallBase : MonoBehaviour
 	{
 		// Spawn new ball nearby (use ball pool)
 	}
+
+	public void ChangeScale(float size)
+	{
+		GetComponent<Transform>().localScale += new Vector3( size, size, size );
+	}
 }
