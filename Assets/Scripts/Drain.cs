@@ -25,6 +25,7 @@ public class Drain : MonoBehaviour
 			//}
 
 			GameManager.instance.DamagePlayer(damage);
+			Destroy(collision.gameObject);
 		}
 		else if (ballLayer.value == collision.gameObject.layer) // is gameobject layer in ball layer?
 		{ // Collision is ball
