@@ -19,7 +19,7 @@ public class EnemyBase : MonoBehaviour
 
 	private void Start()
 	{
-		paths = FindObjectsOfType<Path>();
+		paths = FindObjectsByType<Path>(FindObjectsSortMode.None);
 		rb = GetComponent<Rigidbody2D>();
 		int r = Random.Range(0, paths.Length);
 		path = paths[r];

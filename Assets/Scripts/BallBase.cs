@@ -5,6 +5,7 @@ public class BallBase : MonoBehaviour
 {
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Collider2D col;
+    [SerializeField] private TrailRenderer trailRenderer;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
 	[Header("Enemy Stuff")]
@@ -19,6 +20,7 @@ public class BallBase : MonoBehaviour
 	private void Start()
 	{
 		enemyLayer = LayerMask.NameToLayer("Enemy");
+		trailRenderer.startWidth = transform.localScale.x;
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -54,7 +56,8 @@ public class BallBase : MonoBehaviour
             StopCoroutine(sizeReset);
         }
         sizeReset = StartCoroutine(ResetScaleAfterTime(duration));
-    }
+        trailRenderer.startWidth = transform.localScale.x;
+	}
 
     private IEnumerator ResetScaleAfterTime(float duration)
     {
@@ -71,6 +74,7 @@ public class BallBase : MonoBehaviour
     {
         inPowerUp = false;
         transform.localScale = originalScale;
-    }
+		trailRenderer.startWidth = transform.localScale.x;
+	}
 
 }
