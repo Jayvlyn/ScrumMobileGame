@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPopup: {fileID: 0}
+  OnPlayerHealthUpdated: {fileID: 11400000, guid: cc58891c149b6574386b7f51fb791933, type: 2}

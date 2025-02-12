@@ -1,3 +1,4 @@
+using GameEvents;
 using UnityEngine;
 
 /*
@@ -21,4 +22,5 @@ public class Assets : MonoBehaviour
 
 	[Header("Assets")]
 	public Transform defaultPopup;
+	public FloatEvent OnPlayerHealthUpdated;
 }

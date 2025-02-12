@@ -8,7 +8,21 @@ public class GameManager : MonoBehaviour
 
 	private int score = 0;
 	[SerializeField] private int maxPlayerHealth = 100;
-	private int playerHealth;
+
+	private int playerHealth = 0;
+	private int PlayerHealth
+	{
+		get { return playerHealth; }
+
+		set
+		{
+			playerHealth = value;
+			if(playerHealth < 0) playerHealth = 0;
+			else if (playerHealth > maxPlayerHealth) playerHealth = maxPlayerHealth;
+
+			Assets.i.OnPlayerHealthUpdated.Raise(playerHealth/ (float)maxPlayerHealth);
+		}
+	}
 
     public static GameManager instance;
 
@@ -50,28 +64,28 @@ public class GameManager : MonoBehaviour
 
 	public void RefillPlayerHealth()
 	{
-		playerHealth = maxPlayerHealth;
+		PlayerHealth = maxPlayerHealth;
 	}
 
 	public void OnLevelStart()
 	{
+		RefillPlayerHealth();
 		ResetScore();
 		SetupBall();
-		RefillPlayerHealth();
 	}
 
 	public void DamagePlayer(int damage)
 	{
-		if(playerHealth - damage < 0)
+		if(PlayerHealth - damage < 0)
 		{
-			playerHealth = 0;
+			PlayerHealth = 0;
 		}
 		else
 		{
-			playerHealth -= damage;
+			PlayerHealth -= damage;
 		}
 
-		if(playerHealth <= 0)
+		if(PlayerHealth <= 0)
 		{
 			OnPlayerDeath();
 		}
