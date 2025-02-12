@@ -11,7 +11,7 @@ public class BallBase : MonoBehaviour
 	[SerializeField] float damage;
 	LayerMask enemyLayer;
 
-    private Vector3 originalScale = new Vector3(0.5f, 0.5f, 0.5f);
+    public Vector3 originalScale = new Vector3(0.3f, 0.3f, 0.3f);
     private float sizeResetTimer = 0;
     private Coroutine sizeReset;
 
@@ -45,7 +45,7 @@ public class BallBase : MonoBehaviour
     {
         if (sizeReset == null)
         {
-            transform.localScale += new Vector3(newSize, newSize, newSize);
+            transform.localScale *= newSize;
         }
         else
         {
