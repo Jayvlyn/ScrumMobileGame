@@ -7,15 +7,13 @@ public class BallBase : MonoBehaviour
     [SerializeField] private Collider2D col;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-<<<<<<< Updated upstream
 	[Header("Enemy Stuff")]
 	[SerializeField] LayerMask enemyLayer;
 	[SerializeField] float damage;
 
-	public void OnBallSplit() // Listen for ball split event
-	{
-		// Spawn new ball nearby (use ball pool)
-	}
+    private Vector3 originalScale = new Vector3(0.5f, 0.5f, 0.5f);
+    private float sizeResetTimer = 0;
+    private Coroutine sizeReset;
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -24,17 +22,6 @@ public class BallBase : MonoBehaviour
 			collision.GetComponent<EnemyBase>().ApplyDamage(damage);
 		}
 	}
-
-	public void ChangeScale(float size)
-	{
-		GetComponent<Transform>().localScale += new Vector3( size, size, size );
-	}
-=======
-    private Vector3 originalScale = new Vector3(0.5f, 0.5f, 0.5f);
-    private float sizeResetTimer = 0;
-    private Coroutine sizeReset;
-
-
 
     public void OnBallSplit()
     {
@@ -77,5 +64,5 @@ public class BallBase : MonoBehaviour
     {
         transform.localScale = originalScale;
     }
->>>>>>> Stashed changes
+
 }
