@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class BallBase : MonoBehaviour
 {
-	public Rigidbody2D rb;
-	[SerializeField] private Collider2D col;
-	[SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public Rigidbody2D rb;
+    [SerializeField] private Collider2D col;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
 <<<<<<< Updated upstream
 	[Header("Enemy Stuff")]
