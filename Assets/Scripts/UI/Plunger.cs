@@ -13,7 +13,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 	public FloatEvent onPlungerReleased;
 
-	[Range(10,100)]public float power = 10;
+	[Range(1,10)] public float power = 10;
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
@@ -23,10 +23,15 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 		// We have clicked something that can be dragged.
 		// What we want to do is create an icon for this.
-		m_DraggingIcon = new GameObject("icon");
+		m_DraggingIcon = new GameObject("icon", typeof(RectTransform));
 
 		m_DraggingIcon.transform.SetParent(canvas.transform, false);
 		m_DraggingIcon.transform.SetAsLastSibling();
+
+		if(this.transform is RectTransform rt && m_DraggingIcon.transform is RectTransform newRt)
+		{
+			newRt.sizeDelta = rt.sizeDelta;
+		}
 
 		var image = m_DraggingIcon.AddComponent<Image>();
 
@@ -58,7 +63,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		Vector3 globalMousePos;
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
 		{
-			float newYPos = Mathf.Clamp(globalMousePos.y, -10000, transform.position.y);
+			float newYPos = Mathf.Clamp(globalMousePos.y, transform.position.y - 600, transform.position.y);
 
 			rt.position = new Vector3(gameObject.transform.position.x, newYPos);
 			rt.rotation = m_DraggingPlane.rotation;
@@ -76,8 +81,6 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 			Destroy(m_DraggingIcon);
 
 		GetComponent<Image>().enabled = true;
-
-
 	}
 
 	static public T FindInParents<T>(GameObject go) where T : Component
