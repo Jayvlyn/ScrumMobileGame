@@ -12,8 +12,7 @@ public class EnemyBase : MonoBehaviour
 	private int pathIndex = 0;
 
 	[Header("Movement Stuff")]
-	[SerializeField] float acceleration;
-	[SerializeField] float impulse;
+	[SerializeField] float speed;
 
 	private Rigidbody2D rb;
 	private Collider2D alrCollided;
@@ -25,13 +24,13 @@ public class EnemyBase : MonoBehaviour
 		int r = Random.Range(0, paths.Length);
 		path = paths[r];
 		LookAt2D();
-		rb.AddForce(transform.right * impulse, ForceMode2D.Impulse);
+		MoveEnemy();
 	}
 
 	private void Update()
 	{
 		if (health <= 0) Destroy(gameObject);
-		MoveEnemy();
+		//MoveEnemy();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -42,13 +41,13 @@ public class EnemyBase : MonoBehaviour
 			rb.linearVelocity = Vector2.zero;
 			alrCollided = collision;
 			LookAt2D();
-			rb.AddForce(transform.right * impulse, ForceMode2D.Impulse);
+			MoveEnemy();
 		}
 	}
 
 	private void MoveEnemy()
 	{
-			rb.AddForce(transform.right * acceleration);
+		rb.AddForce(transform.up * speed);
 	}
 
 	private void LookAt2D()
@@ -64,7 +63,7 @@ public class EnemyBase : MonoBehaviour
 		}
 
 		float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-		transform.eulerAngles = new Vector3(0, 0, rotation);
+		transform.eulerAngles = new Vector3(0, 0, rotation - 90);
 	}
 
 	public void ApplyDamage(float d)
