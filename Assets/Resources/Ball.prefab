@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1928703858692697312}
   - component: {fileID: 4523993990627889379}
   - component: {fileID: 184908848539204480}
-  - component: {fileID: -7712490875251271514}
   m_Layer: 8
   m_Name: Ball
   m_TagString: Untagged
@@ -173,31 +172,3 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.49999997
---- !u!114 &-7712490875251271514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2179463136714330864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b663e92038a8fc847b65ab6d544e0e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 87584434d45802d4e8d2d28237355968, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7210719946077695222}
-        m_TargetAssemblyTypeName: BallBase, Assembly-CSharp
-        m_MethodName: OnBallSplit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

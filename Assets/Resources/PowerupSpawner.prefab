@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d156d3f7c0905d48877195b5964e2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerups: []
+  powerups:
+  - {fileID: 8730882521245799705, guid: 99bcaeb88c427234db340a49cfc16d3e, type: 3}
+  - {fileID: 2041595584710564170, guid: 5de282e61f4d3b94bbd76dbd820368f5, type: 3}
   spawnArea: {fileID: 5893077742515987221}
   spawnMinTime: 15
   spawnMaxTime: 30
