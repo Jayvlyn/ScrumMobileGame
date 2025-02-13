@@ -4,6 +4,16 @@ public class EnemyBase : MonoBehaviour
 {
 	[Header("Health Stuff")]
 	[SerializeField] float health;
+	public float Health
+	{
+		get { return health; }
+		set
+		{
+			health = value;
+			if (health <= 0) OnDeath();
+		}
+	}
+
 	[SerializeField] public int damage;
 
 	[Header("Path Stuff")]
@@ -14,8 +24,12 @@ public class EnemyBase : MonoBehaviour
 	[Header("Movement Stuff")]
 	[SerializeField] float speed;
 
+	[Header("Point Stuff")]
+	[SerializeField] int pointValue = 10;
+
 	private Rigidbody2D rb;
 	private Collider2D alrCollided;
+
 
 	private LayerMask drainLm;
 
@@ -28,12 +42,6 @@ public class EnemyBase : MonoBehaviour
 		LookAt2D();
 		MoveEnemy();
 		drainLm = LayerMask.NameToLayer("Drain");
-	}
-
-	private void Update()
-	{
-		if (health <= 0) Destroy(gameObject);
-		//MoveEnemy();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -76,7 +84,13 @@ public class EnemyBase : MonoBehaviour
 
 	public void ApplyDamage(float d)
 	{
-		health -= d;
+		Health -= d;
+	}
+
+	private void OnDeath()
+	{
+		GameManager.instance.AddScore(pointValue);
+		Destroy(gameObject);
 	}
 
 	
