@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +23,12 @@ public class GameManager : MonoBehaviour
 			else if (playerHealth > maxPlayerHealth) playerHealth = maxPlayerHealth;
 
 			Assets.i.OnPlayerHealthUpdated.Raise(playerHealth/ (float)maxPlayerHealth);
+
+			if(playerHealth <= 0)
+			{
+				Assets.i.OnPlayerDeath.Raise();
+				OnPlayerDeath();
+			}
 		}
 	}
 
@@ -76,24 +84,19 @@ public class GameManager : MonoBehaviour
 
 	public void DamagePlayer(int damage)
 	{
-		if(PlayerHealth - damage < 0)
-		{
-			PlayerHealth = 0;
-		}
-		else
-		{
-			PlayerHealth -= damage;
-		}
-
-		if(PlayerHealth <= 0)
-		{
-			OnPlayerDeath();
-		}
+		PlayerHealth -= damage;
 	}
 
-	public void OnPlayerDeath()
+	private void OnPlayerDeath()
 	{
-		// Lose game logic
+		float restartTime = 3f;
+		StartCoroutine(PlayerDeathTimer(restartTime));
+	}
+
+	private IEnumerator PlayerDeathTimer(float time)
+	{
+		yield return new WaitForSecondsRealtime(time);
+		Assets.i.DoSceneChange.Raise("MainMenu");
 	}
 
 	public void OnBallDrained(GameObject ball)

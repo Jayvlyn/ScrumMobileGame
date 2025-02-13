@@ -23,4 +23,6 @@ public class Assets : MonoBehaviour
 	[Header("Assets")]
 	public Transform defaultPopup;
 	public FloatEvent OnPlayerHealthUpdated;
+	public VoidEvent OnPlayerDeath;
+	public StringEvent DoSceneChange;
 }

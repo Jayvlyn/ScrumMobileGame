@@ -5740,6 +5740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863666157}
   - component: {fileID: 1863666156}
+  - component: {fileID: 1863666158}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -5774,6 +5775,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1863666158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863666155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cc60314c876b9478673d82630e1ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 07bdf22c1df7e884489abb23b0816d27, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1863666156}
+        m_TargetAssemblyTypeName: ManageScene, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1871609679
 GameObject:
   m_ObjectHideFlags: 0

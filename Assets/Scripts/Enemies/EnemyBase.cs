@@ -4,7 +4,7 @@ public class EnemyBase : MonoBehaviour
 {
 	[Header("Health Stuff")]
 	[SerializeField] float health;
-	[SerializeField] public float damage;
+	[SerializeField] public int damage;
 
 	[Header("Path Stuff")]
 	private Path[] paths;
@@ -17,6 +17,8 @@ public class EnemyBase : MonoBehaviour
 	private Rigidbody2D rb;
 	private Collider2D alrCollided;
 
+	private LayerMask drainLm;
+
 	private void Start()
 	{
 		paths = FindObjectsByType<Path>(FindObjectsSortMode.None);
@@ -25,6 +27,7 @@ public class EnemyBase : MonoBehaviour
 		path = paths[r];
 		LookAt2D();
 		MoveEnemy();
+		drainLm = LayerMask.NameToLayer("Drain");
 	}
 
 	private void Update()
@@ -42,6 +45,11 @@ public class EnemyBase : MonoBehaviour
 			alrCollided = collision;
 			LookAt2D();
 			MoveEnemy();
+		}
+
+		if(collision.gameObject.layer == drainLm.value)
+		{
+			GameManager.instance.DamagePlayer(damage);
 		}
 	}
 
@@ -70,4 +78,6 @@ public class EnemyBase : MonoBehaviour
 	{
 		health -= d;
 	}
+
+	
 }
