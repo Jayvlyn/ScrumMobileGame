@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private Transform ballStart;
 
 	private int score = 0;
+
 	[SerializeField] private int maxPlayerHealth = 100;
 
 	private int playerHealth = 0;

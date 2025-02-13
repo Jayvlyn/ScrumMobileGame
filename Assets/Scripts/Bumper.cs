@@ -4,7 +4,7 @@ using UnityEngine;
 public class Bumper : MonoBehaviour
 {
     [SerializeField]
-    float points = 0;
+    int points = 0;
     [SerializeField, Range(0, 10)]
     float bounceForce = 10;
     [SerializeField]
@@ -31,6 +31,9 @@ public class Bumper : MonoBehaviour
             collision.rigidbody.AddForce(reflect * bounceForce, ForceMode2D.Impulse);
 
             if (bumpSounds.Length > 0) audioSource.PlayOneShot(bumpSounds[0]);
+
+            GameManager.instance.AddScore(points);
+
             //TODO: Play animation, add sounds.
         }
     }
