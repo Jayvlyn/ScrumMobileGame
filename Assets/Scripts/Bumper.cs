@@ -33,8 +33,9 @@ public class Bumper : MonoBehaviour
             if (bumpSounds.Length > 0) audioSource.PlayOneShot(bumpSounds[0]);
 
             GameManager.instance.AddScore(points);
+			NumberPopup.Create(transform.position, "+"+points);
 
-            //TODO: Play animation, add sounds.
-        }
+			//TODO: Play animation, add sounds.
+		}
     }
 }

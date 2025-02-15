@@ -22,6 +22,8 @@ public class Assets : MonoBehaviour
 
 	[Header("Assets")]
 	public Transform defaultPopup;
+	public Transform damageEnemyPopup;
+	public Transform takeDamagePopup;
 	public FloatEvent OnPlayerHealthUpdated;
 	public VoidEvent OnPlayerDeath;
 	public StringEvent DoSceneChange;

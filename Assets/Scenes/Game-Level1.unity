@@ -3535,6 +3535,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1885671668128196298, guid: 5fe24eb33db32bb4fa8a043c020d1da3, type: 3}
+      propertyPath: points
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7428709678646668242, guid: 5fe24eb33db32bb4fa8a043c020d1da3, type: 3}
       propertyPath: m_Name
       value: CircleBumper (2)
@@ -5028,6 +5032,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1885671668128196298, guid: 5fe24eb33db32bb4fa8a043c020d1da3, type: 3}
+      propertyPath: points
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7428709678646668242, guid: 5fe24eb33db32bb4fa8a043c020d1da3, type: 3}
       propertyPath: m_Name
       value: CircleBumper (1)
@@ -6168,6 +6176,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1299150663}
     m_Modifications:
+    - target: {fileID: 2855921299359293112, guid: 220097740b153024f8c6517712c82ddc, type: 3}
+      propertyPath: points
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855921299359293112, guid: 220097740b153024f8c6517712c82ddc, type: 3}
+      propertyPath: bounceForce
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3195691063334835048, guid: 220097740b153024f8c6517712c82ddc, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.39153776
@@ -6227,6 +6243,18 @@ PrefabInstance:
     - target: {fileID: 5651634120725012563, guid: 220097740b153024f8c6517712c82ddc, type: 3}
       propertyPath: m_Size.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920934930272347682, guid: 220097740b153024f8c6517712c82ddc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.29369873
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920934930272347682, guid: 220097740b153024f8c6517712c82ddc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920934930272347682, guid: 220097740b153024f8c6517712c82ddc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9071896
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

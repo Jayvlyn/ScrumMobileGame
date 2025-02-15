@@ -52,7 +52,7 @@ MonoBehaviour:
   col: {fileID: 184908848539204480}
   trailRenderer: {fileID: 5184982340131595199}
   spriteRenderer: {fileID: 1928703858692697312}
-  damage: 1000
+  damage: 500
   originalScale: {x: 0.3, y: 0.3, z: 0.3}
 --- !u!212 &1928703858692697312
 SpriteRenderer:

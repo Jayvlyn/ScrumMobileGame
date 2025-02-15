@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
 	public void DamagePlayer(int damage)
 	{
 		PlayerHealth -= damage;
+		NumberPopup.Create(new Vector3(0, -6, 0), "-" + damage, default, false, false, NumberPopup.PopupType.TAKE_DAMAGE);
 	}
 
 	private void OnPlayerDeath()

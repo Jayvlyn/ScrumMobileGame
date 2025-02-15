@@ -85,11 +85,13 @@ public class EnemyBase : MonoBehaviour
 	public void ApplyDamage(float d)
 	{
 		Health -= d;
+		NumberPopup.Create(transform.position, d.ToString(), default, false, false, NumberPopup.PopupType.DAMAGE_ENEMY);
 	}
 
 	private void OnDeath()
 	{
 		GameManager.instance.AddScore(pointValue);
+		NumberPopup.Create(transform.position, "+"+pointValue.ToString());
 		Destroy(gameObject);
 	}
 

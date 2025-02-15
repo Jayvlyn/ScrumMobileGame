@@ -287,6 +287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ebd8d7dcb289e45bf4769a1ef7fb65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
+  points: 5
   bounceForce: 1
   bumpSounds: []
