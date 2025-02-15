@@ -9,6 +9,15 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private Transform ballStart;
 
 	private int score = 0;
+	public int Score
+	{
+		get { return score; }
+		set
+		{
+			score = value;
+			Assets.i.OnPlayerScoreUpdated.Raise(score);
+		}
+	}
 
 	[SerializeField] private int maxPlayerHealth = 100;
 
@@ -63,12 +72,12 @@ public class GameManager : MonoBehaviour
 
 	public void AddScore(int points)
 	{
-		score += points;
+		Score += points;
 	}
 
 	public void ResetScore()
 	{
-		score = 0;
+		Score = 0;
 	}
 
 	public void RefillPlayerHealth()
@@ -106,7 +115,8 @@ public class GameManager : MonoBehaviour
 		ballPool.DeactivateObject(ball);
 		if (ballPool.NoneActive())
 		{
-			OnLevelStart();
+			//OnLevelStart();
+			SetupBall();
 		}
 	}
 }

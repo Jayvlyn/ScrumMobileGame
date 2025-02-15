@@ -15,16 +15,6 @@ public class Drain : MonoBehaviour
 	{
 		if (enemyLayer.value == collision.gameObject.layer) // is gameobject layer in enemy layer?
 		{ // Collision is enemy
-			int damage = 1;
-
-			// Below is commented out because no enemy class yet
-
-			//if(collision.gameObject.TryGetComponent(out Enemy e))
-			//{
-			//	damage = e.damage;
-			//}
-
-
 			Destroy(collision.gameObject);
 		}
 		else if (ballLayer.value == collision.gameObject.layer) // is gameobject layer in ball layer?

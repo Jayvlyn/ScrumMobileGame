@@ -48,5 +48,6 @@ MonoBehaviour:
   damageEnemyPopup: {fileID: 3912024481704176706, guid: 65024e9d3f5e10645883d744844d3c2c, type: 3}
   takeDamagePopup: {fileID: 3912024481704176706, guid: 20ce7cabeefa6874aa57f8323d425c57, type: 3}
   OnPlayerHealthUpdated: {fileID: 11400000, guid: cc58891c149b6574386b7f51fb791933, type: 2}
+  OnPlayerScoreUpdated: {fileID: 11400000, guid: 7a21c62bdee1b3c469cfcbddc375762a, type: 2}
   OnPlayerDeath: {fileID: 11400000, guid: 01b62190c59ff004bad9a0be5a71f676, type: 2}
   DoSceneChange: {fileID: 11400000, guid: 07bdf22c1df7e884489abb23b0816d27, type: 2}
