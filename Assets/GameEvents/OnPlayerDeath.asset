@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bf85d27520492c47b06228392cefed0, type: 3}
-  m_Name: BallSplitEvent
+  m_Name: OnPlayerDeath
   m_EditorClassIdentifier: 

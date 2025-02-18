@@ -48,20 +48,16 @@ public class NumberPopup : MonoBehaviour
 
     private static int sortingOrder;
 
-    private TextMeshPro textMesh;
+    public TextMeshPro textMesh;
     private float growTimer;
     private float sustainTimer;
 
     private Color textColor;
-    private string regularColorHex = "bf6b30";
-    private string critColorHex = "9c0f0f";
+    private string regularColorHex = "ffffff";
+    private string critColorHex = "ffffff";
 
     private Vector3 moveVector;
 
-    private void Awake()
-    {
-        textMesh = transform.GetComponent<TextMeshPro>();
-    }
 
     private void Update()
     {
@@ -92,14 +88,22 @@ public class NumberPopup : MonoBehaviour
         }
     }
 
-    public static NumberPopup Create(Vector3 position, int damageAmount, Vector3 inputMoveVec = default, bool isCriticalHit = false, bool invertRotate = false, PopupType type = PopupType.DEFAULT, Color color = default)
+    public static NumberPopup Create(Vector3 position, string text, Vector3 inputMoveVec = default, bool isCriticalHit = false, bool invertRotate = false, PopupType type = PopupType.DEFAULT, Color color = default)
     {
         Transform popupPrefab = Assets.i.defaultPopup;
+        if(type == PopupType.DAMAGE_ENEMY)
+        {
+            popupPrefab = Assets.i.damageEnemyPopup;
+        }
+		else if (type == PopupType.TAKE_DAMAGE)
+		{
+            popupPrefab = Assets.i.takeDamagePopup;
+		}
 
-        float overrideFontSize = -1;
+		float overrideFontSize = -1;
         if(!Utils.IsPositionInCameraBounds(position))
         {
-            if (type == PopupType.DEFAULT) return null;
+            //if (type == PopupType.DEFAULT) return null;
 
             // handle position in viewport context (0 to 1)
             Vector3 viewportPos = Camera.main.WorldToViewportPoint(position);
@@ -117,29 +121,24 @@ public class NumberPopup : MonoBehaviour
             overrideFontSize = 4f;
         }
 
-        Transform damagePopupT = Instantiate(popupPrefab, position, Quaternion.identity);
-        NumberPopup damagePopup = damagePopupT.GetComponent<NumberPopup>();
-        damagePopup.Setup(damageAmount, inputMoveVec, isCriticalHit, invertRotate, overrideFontSize, color);
+        Transform popupT = Instantiate(popupPrefab, position, Quaternion.identity);
+        NumberPopup popup = popupT.GetComponent<NumberPopup>();
+        popup.Setup(text, inputMoveVec, isCriticalHit, invertRotate, overrideFontSize, color);
 
-        return damagePopup;
-    }
-
-    public static NumberPopup Create(Vector3 position, float damageAmount, Vector3 inputMoveVec = default, bool isCriticalHit = false, bool invertRotate = false, PopupType type = PopupType.DEFAULT, Color color = default)
-    {
-        return Create(position,Mathf.RoundToInt(damageAmount), inputMoveVec, isCriticalHit, invertRotate, type, color);
+        return popup;
     }
 
     public enum PopupType
     {
         DEFAULT,
-        PLAYER,
-        ENEMY
+        DAMAGE_ENEMY,
+        TAKE_DAMAGE
     }
 
 
-	public void Setup(int damageAmount, Vector3 inputMoveVec = default, bool isCriticalHit = false, bool invertRotate = false, float overrideFontSize = -1, Color overrideColor = default)
+	public void Setup(string text, Vector3 inputMoveVec = default, bool isCriticalHit = false, bool invertRotate = false, float overrideFontSize = -1, Color overrideColor = default)
     {
-        textMesh.SetText(damageAmount.ToString());
+        textMesh.SetText(text);
 
         if(isCriticalHit)
         { // Critical Hit

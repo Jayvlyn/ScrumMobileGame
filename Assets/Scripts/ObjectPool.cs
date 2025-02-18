@@ -30,6 +30,7 @@ public class ObjectPool : MonoBehaviour
 			{
 				foundGo = obj;
 				obj.SetActive(true);
+				break;
 			}
 		}
 		if (foundGo == null)
