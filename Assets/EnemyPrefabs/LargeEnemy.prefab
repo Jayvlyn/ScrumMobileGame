@@ -167,5 +167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1000
   damage: 10
-  speed: 80
+  acceleration: 0.25
+  impulse: 2
   pointValue: 10
