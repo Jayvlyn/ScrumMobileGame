@@ -1,19 +1,18 @@
-# Pinball Game
+# Wind-up Wipeout
 ## Summary
-[Name of game] is a unique spin on the classic pinball machine. Play pinball while fighting of waves of enemies who seek to get to the drain.
+Wind-up Wipeout is a unique spin on the classic pinball machine. Play pinball while fighting of waves of enemies who seek to get to the drain.
 
 ## Features
-- Sample Feature 1
-- Sample Feature 2
-- Sample Feature 3
+- Enemy Variety
+- Powerups like split and grow!
+- Different Game Modes!
+- Interactive Plunger!
 
 ## Important Pinball Terms
 - Drain
   - Area beneath the flippers where the ball/game will be considered lost.
 - Magic Post (stopper, peg, ball-saver, magna-saver)
   - An object between the flippers that blocks the ball from entering the drain.
-- Target
-  - An object activated by the ball to earn points, change the playfield, or advance the game.
 - Flipper
   - The objects at the bottom of the playfield the contols to hit the ball.
 - Bumper
@@ -21,18 +20,5 @@
 - Plunger
   - Player-controlled spring that launches the ball onto the playfield.
 
-## File Structure
-
-```
-Assets/
-├── Audio/
-├── Fonts/
-├── Scenes/
-├── Scripts/
-└── Textures/   
-```
-
-## Tech
-
 ### Unity 6
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/649dd3bc-e268-40e6-8120-89e4b32587b3)
