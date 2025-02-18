@@ -10,6 +10,11 @@ public class BallBase : MonoBehaviour
 	[SerializeField] LayerMask enemyLayer;
 	[SerializeField] float damage;
 
+	private void Start()
+	{
+		enemyLayer = LayerMask.NameToLayer("Enemy");
+	}
+
 	public void OnBallSplit() // Listen for ball split event
 	{
 		// Spawn new ball nearby (use ball pool)
@@ -17,14 +22,14 @@ public class BallBase : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject.layer == enemyLayer)
+		if (collision.gameObject.layer == enemyLayer.value)
 		{
-			collision.GetComponent<EnemyBase>().ApplyDamage(damage);
+			collision.gameObject.GetComponent<EnemyBase>().ApplyDamage(damage);
 		}
 	}
 
 	public void ChangeScale(float size)
 	{
-		GetComponent<Transform>().localScale += new Vector3( size, size, size );
+		GetComponent<Transform>().localScale += new Vector3(size, size, size);
 	}
 }

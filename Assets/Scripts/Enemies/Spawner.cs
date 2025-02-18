@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-	[SerializeField] GameObject[] toSpawns;
+    [SerializeField] GameObject[] toSpawns;
 	[SerializeField] float timeBetweenSpawns;
 	private float og;
 
