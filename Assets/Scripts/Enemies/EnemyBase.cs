@@ -22,7 +22,8 @@ public class EnemyBase : MonoBehaviour
 	private int pathIndex = 0;
 
 	[Header("Movement Stuff")]
-	[SerializeField] float speed;
+	[SerializeField] float acceleration;
+	[SerializeField] float impulse;
 
 	[Header("Point Stuff")]
 	[SerializeField] int pointValue = 10;
@@ -41,6 +42,7 @@ public class EnemyBase : MonoBehaviour
 		path = paths[r];
 		LookAt2D();
 		MoveEnemy();
+		rb.AddForce(transform.up * impulse, ForceMode2D.Impulse);
 		drainLm = LayerMask.NameToLayer("Drain");
 	}
 
@@ -52,7 +54,7 @@ public class EnemyBase : MonoBehaviour
 			rb.linearVelocity = Vector2.zero;
 			alrCollided = collision;
 			LookAt2D();
-			MoveEnemy();
+			rb.AddForce(transform.up * impulse, ForceMode2D.Impulse);
 		}
 
 		if(collision.gameObject.layer == drainLm.value)
@@ -63,7 +65,7 @@ public class EnemyBase : MonoBehaviour
 
 	private void MoveEnemy()
 	{
-		rb.AddForce(transform.up * speed);
+		rb.AddForce(transform.up * acceleration);
 	}
 
 	private void LookAt2D()
