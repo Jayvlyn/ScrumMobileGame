@@ -414,6 +414,126 @@ MonoBehaviour:
   - {fileID: 1584323119}
   - {fileID: 519788624}
   - {fileID: 1785373198}
+--- !u!1001 &92883729
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1621082338823040568, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_Name
+      value: MagicPost
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.048
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.652
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628772644562396411, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1621082338823040568, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 92883732}
+  m_SourcePrefab: {fileID: 100100000, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+--- !u!1 &92883730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1621082338823040568, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+  m_PrefabInstance: {fileID: 92883729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &92883731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1861921893129963493, guid: 9315e09cd0549f84986937fc6c7594b6, type: 3}
+  m_PrefabInstance: {fileID: 92883729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92883730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a1d95daac18c4db249a0c580e0364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &92883732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92883730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b663e92038a8fc847b65ab6d544e0e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 493c33e810584b14aa7ca473eb0515e6, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 92883731}
+        m_TargetAssemblyTypeName: MagicPost, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &117571535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,7 +2800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 30, y: 13}
+  m_AnchoredPosition: {x: 30, y: 13.0000305}
   m_SizeDelta: {x: 200, y: 400}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1068376927
@@ -4448,6 +4568,14 @@ PrefabInstance:
       propertyPath: spawnMinTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 59120233867911092, guid: 362ae8f2688d87c4c96c93e2dd354203, type: 3}
+      propertyPath: powerups.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 59120233867911092, guid: 362ae8f2688d87c4c96c93e2dd354203, type: 3}
+      propertyPath: 'powerups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 385657915442702444, guid: bcf260e66f8f281499260330f2b47f0d, type: 3}
     - target: {fileID: 2020234105691984454, guid: 362ae8f2688d87c4c96c93e2dd354203, type: 3}
       propertyPath: m_Name
       value: PowerupSpawner
@@ -6863,3 +6991,4 @@ SceneRoots:
   - {fileID: 1553274473}
   - {fileID: 1549982032}
   - {fileID: 1299150663}
+  - {fileID: 92883729}
