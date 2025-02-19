@@ -6,18 +6,20 @@ public class OptionsPanel : MonoBehaviour
     public GameObject uiPanel;
     public Animator uiAnimator;
     private bool isOpen = false;
+    [SerializeField] public string openAnim;
+    [SerializeField] public string closeAnim;
 
     public void ToggleUI()
     {
         if (isOpen)
         {
-            uiAnimator.Play("OptionsClose");
+            uiAnimator.Play(closeAnim);
             StartCoroutine(DisablePanelAfterAnimation());
         }
         else
         {
             uiPanel.SetActive(true);
-            uiAnimator.Play("OptionsOpen");
+            uiAnimator.Play(openAnim);
         }
 
         isOpen = !isOpen;
