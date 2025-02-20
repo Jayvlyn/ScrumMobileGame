@@ -28,4 +28,7 @@ public class Assets : MonoBehaviour
 	public IntEvent OnPlayerScoreUpdated;
 	public VoidEvent OnPlayerDeath;
 	public StringEvent DoSceneChange;
+	public Transform enemyDamageParticles;
+	public Transform playerDamageParticles;
+	public Transform circleBumperParticles;
 }

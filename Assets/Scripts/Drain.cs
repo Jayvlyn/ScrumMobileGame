@@ -16,6 +16,7 @@ public class Drain : MonoBehaviour
 		if (enemyLayer.value == collision.gameObject.layer) // is gameobject layer in enemy layer?
 		{ // Collision is enemy
 			Destroy(collision.gameObject);
+			Transform particles = Instantiate(Assets.i.playerDamageParticles, new Vector2(transform.position.x, transform.position.y + 1), Assets.i.playerDamageParticles.transform.rotation);
 		}
 		else if (ballLayer.value == collision.gameObject.layer) // is gameobject layer in ball layer?
 		{ // Collision is ball
