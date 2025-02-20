@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 871204562}
-  objectPrefab: {fileID: 2179463136714330864, guid: 03e315f157363aa48a41f7cddd49fcb9, type: 3}
+  objectPrefab: {fileID: 871204562}
   activeCount: 1
 --- !u!4 &134120100
 Transform:

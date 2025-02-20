@@ -20,6 +20,7 @@ public class ToggleSwitchGroupManager : MonoBehaviour
         {
             RegisterToggleButtonToGroup(toggleSwitch);
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void RegisterToggleButtonToGroup(ToggleSwitch toggleSwitch)
