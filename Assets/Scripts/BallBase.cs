@@ -25,10 +25,15 @@ public class BallBase : MonoBehaviour
 		enemyLayer = LayerMask.NameToLayer("Enemy");
 		trailRenderer.startWidth = transform.localScale.x;
 
+        //UpdateTrailState();
+    }
+
+    private void Update()
+    {
         UpdateTrailState();
     }
 
-	private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.layer == enemyLayer)
 		{

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 	public ObjectPool ballPool;
 	public Drain drain;
 	[SerializeField] private Transform ballStart;
+	[SerializeField] private PauseManager pauseManager;
 
 	private int score = 0;
 	public int Score

@@ -9,22 +9,36 @@ public class PauseManager : MonoBehaviour
     [SerializeField] public string openAnim;
     [SerializeField] public string closeAnim;
 
+    public bool isGamePaused = false;
+
     public void ToggleUI()
     {
         if (isOpen)
         {
             uiAnimator.Play(closeAnim);
             StartCoroutine(DisablePanelAfterAnimation());
-            Time.timeScale = 1f;
+            //UnpauseGame();
         }
         else
         {
             uiPanel.SetActive(true);
             uiAnimator.Play(openAnim);
-            //Time.timeScale = 0f;
+            //PauseGame();
         }
 
         isOpen = !isOpen;
+    }
+
+    private void PauseGame()
+    {
+        isGamePaused = true;
+        Time.timeScale = 0f;
+    }
+
+    private void UnpauseGame()
+    {
+        isGamePaused = false;
+        Time.timeScale = 1f;
     }
 
     private IEnumerator DisablePanelAfterAnimation()
