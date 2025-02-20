@@ -17,6 +17,7 @@ public class Bumper : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        audioSource.outputAudioMixerGroup = AudioManager.instance.audioMixer.FindMatchingGroups("SoundEffects")[0];
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
