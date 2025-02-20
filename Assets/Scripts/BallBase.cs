@@ -17,11 +17,16 @@ public class BallBase : MonoBehaviour
     private Coroutine sizeReset;
     private bool inPowerUp = false;
 
-	private void Start()
+    [Header("Toggle Switch")]
+    [SerializeField] private ToggleSwitch toggleSwitch;
+
+    private void Start()
 	{
 		enemyLayer = LayerMask.NameToLayer("Enemy");
 		trailRenderer.startWidth = transform.localScale.x;
-	}
+
+        UpdateTrailState();
+    }
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -76,5 +81,20 @@ public class BallBase : MonoBehaviour
         transform.localScale = originalScale;
 		trailRenderer.startWidth = transform.localScale.x;
 	}
+
+    private void UpdateTrailState()
+    {
+        if (toggleSwitch != null)
+        {
+            trailRenderer.enabled = toggleSwitch.CurrentValue;
+        }
+    }
+
+    public void SetToggleSwitch(ToggleSwitch toggle)
+    {
+        toggleSwitch = toggle;
+        toggleSwitch.onToggleOn.AddListener(UpdateTrailState);
+        toggleSwitch.onToggleOff.AddListener(UpdateTrailState);
+    }
 
 }
