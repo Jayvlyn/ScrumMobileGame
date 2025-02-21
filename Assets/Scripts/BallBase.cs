@@ -38,8 +38,16 @@ public class BallBase : MonoBehaviour
 		if (collision.gameObject.layer == enemyLayer)
 		{
             int damage = Mathf.RoundToInt(rb.mass * rb.linearVelocity.magnitude * baseDamage);
-            Debug.Log(damage);
 			collision.GetComponent<EnemyBase>().ApplyDamage(damage);
+
+			// PARTICLE EFFECT
+			Vector2 collisionPoint = collision.ClosestPoint(transform.position);
+
+			Vector2 direction = (transform.position - (Vector3)collisionPoint).normalized;
+
+			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+			Transform particles = Instantiate(Assets.i.enemyDamageParticles, collisionPoint, Quaternion.Euler(0, 0, angle));
 		}
 	}
 
