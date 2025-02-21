@@ -226,6 +226,7 @@ MonoBehaviour:
   points: 10
   bounceForce: 1
   bumpSounds: []
+  particles: {fileID: 7277434656789682361, guid: 2b824ebbff9b57140b349f33deef2791, type: 3}
 --- !u!50 &823434261138336184
 Rigidbody2D:
   serializedVersion: 5

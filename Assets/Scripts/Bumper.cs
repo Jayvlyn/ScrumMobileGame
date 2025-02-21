@@ -10,6 +10,9 @@ public class Bumper : MonoBehaviour
     [SerializeField]
     AudioClip[] bumpSounds;
 
+    [SerializeField]
+    Transform particles;
+
     private AudioSource audioSource;
     private Animator animator;
 
@@ -35,6 +38,12 @@ public class Bumper : MonoBehaviour
 
             GameManager.instance.AddScore(points);
 			NumberPopup.Create(transform.position, "+"+points);
+
+
+            if(particles != null)
+            {
+                Instantiate(particles, transform);
+            }
 
 			//TODO: Play animation, add sounds.
 		}

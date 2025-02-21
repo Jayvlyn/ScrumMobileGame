@@ -51,3 +51,6 @@ MonoBehaviour:
   OnPlayerScoreUpdated: {fileID: 11400000, guid: 7a21c62bdee1b3c469cfcbddc375762a, type: 2}
   OnPlayerDeath: {fileID: 11400000, guid: 01b62190c59ff004bad9a0be5a71f676, type: 2}
   DoSceneChange: {fileID: 11400000, guid: 07bdf22c1df7e884489abb23b0816d27, type: 2}
+  enemyDamageParticles: {fileID: 5907546885511087240, guid: 0ab766f893265ae4d9913a2696defa94, type: 3}
+  playerDamageParticles: {fileID: 5907546885511087240, guid: 0a67917d51dbd474eadddba748c8cff9, type: 3}
+  circleBumperParticles: {fileID: 7277434656789682361, guid: 2b824ebbff9b57140b349f33deef2791, type: 3}
