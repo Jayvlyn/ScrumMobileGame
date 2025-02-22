@@ -40,7 +40,7 @@ public class Bumper : MonoBehaviour
 			NumberPopup.Create(transform.position, "+"+points);
 
 
-            if(particles != null)
+            if(particles != null && OptionsPanel.particlesEnabled)
             {
                 Instantiate(particles, transform);
             }

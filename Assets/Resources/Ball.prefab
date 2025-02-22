@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4523993990627889379}
   - component: {fileID: 184908848539204480}
   - component: {fileID: 5184982340131595199}
+  - component: {fileID: 2387295340866022752}
   m_Layer: 8
   m_Name: Ball
   m_TagString: Untagged
@@ -292,3 +293,31 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &2387295340866022752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2179463136714330864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58f539ae4a63094fa87ce2860fa5d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1f7ffc908178389478da33cc9fe6174a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7210719946077695222}
+        m_TargetAssemblyTypeName: BallBase, Assembly-CSharp
+        m_MethodName: UpdateTrailState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

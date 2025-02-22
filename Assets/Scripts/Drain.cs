@@ -18,7 +18,10 @@ public class Drain : MonoBehaviour
 			Destroy(collision.gameObject);
 
 			// PARTICLE EFFECT
-			Transform particles = Instantiate(Assets.i.playerDamageParticles, new Vector2(transform.position.x, transform.position.y + 1), Assets.i.playerDamageParticles.transform.rotation);
+			if (OptionsPanel.particlesEnabled)
+			{
+				Transform particles = Instantiate(Assets.i.playerDamageParticles, new Vector2(transform.position.x, transform.position.y + 1), Assets.i.playerDamageParticles.transform.rotation);
+			}
 		}
 		else if (ballLayer.value == collision.gameObject.layer) // is gameobject layer in ball layer?
 		{ // Collision is ball

@@ -1,3 +1,4 @@
+using GameEvents;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -21,11 +22,10 @@ public class ToggleSwitch : MonoBehaviour, IPointerClickHandler
     private AnimationCurve slideEase =
         AnimationCurve.EaseInOut(0, 0, 1, 1);
 
-    private Coroutine _animateSliderCoroutine;
-
     [Header("Events")]
-    [SerializeField] public UnityEvent onToggleOn;
-    [SerializeField] public UnityEvent onToggleOff;
+    [SerializeField] IntEvent onToggle;
+
+    private Coroutine _animateSliderCoroutine;
 
     private ToggleSwitchGroupManager _toggleSwitchGroupManager;
 
@@ -131,9 +131,9 @@ public class ToggleSwitch : MonoBehaviour, IPointerClickHandler
         if (_previousValue != CurrentValue)
         {
             if (CurrentValue)
-                onToggleOn?.Invoke();
+                onToggle.Raise(1);
             else
-                onToggleOff?.Invoke();
+                onToggle.Raise(0);
         }
 
         if (gameObject.activeInHierarchy)

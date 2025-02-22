@@ -23,9 +23,6 @@ public class BallBase : MonoBehaviour
     private Coroutine sizeReset;
     private bool inPowerUp = false;
 
-    [Header("Toggle Switch")]
-    [SerializeField] private ToggleSwitch toggleSwitch;
-
     private void Start()
 	{
 		rb.mass = 1.0f;
@@ -34,28 +31,27 @@ public class BallBase : MonoBehaviour
 
 		spriteRenderer.color = originalColor;
 		trailRenderer.startColor = originalTrailColor;
+		UpdateTrailState();
 	}
-
-	private void Update()
-    {
-        UpdateTrailState();
-    }
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.layer == enemyLayer)
 		{
-			int damage = Mathf.RoundToInt(rb.mass * rb.linearVelocity.magnitude * baseDamage);
+			int damage = Mathf.RoundToInt(rb.mass * (rb.linearVelocity.magnitude > 1 ? rb.linearVelocity.magnitude : 1) * baseDamage);
 			collision.GetComponent<EnemyBase>().ApplyDamage(damage);
 
 			// PARTICLE EFFECT
-			Vector2 collisionPoint = collision.ClosestPoint(transform.position);
+			if(OptionsPanel.particlesEnabled)
+			{
+				Vector2 collisionPoint = collision.ClosestPoint(transform.position);
 
-			Vector2 direction = (transform.position - (Vector3)collisionPoint).normalized;
+				Vector2 direction = (transform.position - (Vector3)collisionPoint).normalized;
 
-			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+				float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-			Transform particles = Instantiate(Assets.i.enemyDamageParticles, collisionPoint, Quaternion.Euler(0, 0, angle));
+				Transform particles = Instantiate(Assets.i.enemyDamageParticles, collisionPoint, Quaternion.Euler(0, 0, angle));
+			}
 		}
 	}
 
@@ -150,19 +146,18 @@ public class BallBase : MonoBehaviour
 		spriteRenderer.color = targetColor;
 	}
 
-	private void UpdateTrailState()
+	public void UpdateTrailState(int toggleState = -1)
     {
-        if (toggleSwitch != null)
-        {
-            trailRenderer.enabled = toggleSwitch.CurrentValue;
-        }
-    }
+		if(toggleState == -1)
+			trailRenderer.enabled = OptionsPanel.trailsEnabled;
 
-    public void SetToggleSwitch(ToggleSwitch toggle)
-    {
-        toggleSwitch = toggle;
-        toggleSwitch.onToggleOn.AddListener(UpdateTrailState);
-        toggleSwitch.onToggleOff.AddListener(UpdateTrailState);
+		else if (toggleState == 1)
+		{
+			trailRenderer.enabled = true;
+		}
+		else
+		{
+			trailRenderer.enabled = false;
+		}
     }
-
 }
