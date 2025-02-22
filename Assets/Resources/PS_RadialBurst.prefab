@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6437839060693336613}
   - component: {fileID: 2444463352290068293}
   - component: {fileID: 6080156758072442136}
+  - component: {fileID: 3466297103434037865}
   m_Layer: 0
   m_Name: PS_RadialBurst
   m_TagString: Untagged
@@ -4900,3 +4901,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &3466297103434037865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438960547144960749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edd5b614647c264b854d8d68e2651a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
