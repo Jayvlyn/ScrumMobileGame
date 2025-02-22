@@ -5,6 +5,9 @@ public class Drain : MonoBehaviour
 	private LayerMask enemyLayer;
 	private LayerMask ballLayer;
 
+	[SerializeField] SoundPicker takeDamageSound;
+	[SerializeField] SoundPicker drainBallSound;
+
 	private void Start()
 	{
 		enemyLayer = LayerMask.NameToLayer("Enemy");
@@ -22,10 +25,14 @@ public class Drain : MonoBehaviour
 			{
 				Transform particles = Instantiate(Assets.i.playerDamageParticles, new Vector2(transform.position.x, transform.position.y + 1), Assets.i.playerDamageParticles.transform.rotation);
 			}
+
+			if (takeDamageSound) takeDamageSound.PlayRandomSound();
 		}
 		else if (ballLayer.value == collision.gameObject.layer) // is gameobject layer in ball layer?
 		{ // Collision is ball
 			GameManager.instance.OnBallDrained(collision.gameObject);
+
+			if(drainBallSound) drainBallSound.PlayRandomSound();
 		}
 	}
 }

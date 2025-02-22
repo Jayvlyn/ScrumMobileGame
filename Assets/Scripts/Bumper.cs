@@ -7,20 +7,17 @@ public class Bumper : MonoBehaviour
     int points = 0;
     [SerializeField, Range(0, 10)]
     float bounceForce = 10;
-    [SerializeField]
-    AudioClip[] bumpSounds;
 
     [SerializeField]
     Transform particles;
 
-    private AudioSource audioSource;
+    [SerializeField] private SoundPicker sound;
+
     private Animator animator;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
-        audioSource.outputAudioMixerGroup = AudioManager.instance.audioMixer.FindMatchingGroups("SoundEffects")[0];
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,8 +31,6 @@ public class Bumper : MonoBehaviour
 
             collision.rigidbody.AddForce(reflect * bounceForce, ForceMode2D.Impulse);
 
-            if (bumpSounds.Length > 0) audioSource.PlayOneShot(bumpSounds[0]);
-
             GameManager.instance.AddScore(points);
 			NumberPopup.Create(transform.position, "+"+points);
 
@@ -45,7 +40,9 @@ public class Bumper : MonoBehaviour
                 Instantiate(particles, transform);
             }
 
-			//TODO: Play animation, add sounds.
+            if (sound) sound.PlayRandomSound();
+
+			//TODO: Play animation
 		}
     }
 }

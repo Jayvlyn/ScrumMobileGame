@@ -10619,6 +10619,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7302518810522464507, guid: 360e1e3e29397734aa4861385d41483b, type: 3}
+      propertyPath: drainBallSound
+      value: 
+      objectReference: {fileID: 1698331780}
+    - target: {fileID: 7302518810522464507, guid: 360e1e3e29397734aa4861385d41483b, type: 3}
+      propertyPath: takeDamageSound
+      value: 
+      objectReference: {fileID: 1698331778}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11048,6 +11056,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33e1075bc057d934897d6b214c9566ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1698331778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9178580536858135277, guid: 360e1e3e29397734aa4861385d41483b, type: 3}
+  m_PrefabInstance: {fileID: 1549982032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2318a62cb60f94f8a474622cd8b8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1698331780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4063682565973053432, guid: 360e1e3e29397734aa4861385d41483b, type: 3}
+  m_PrefabInstance: {fileID: 1549982032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2318a62cb60f94f8a474622cd8b8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1707550759
