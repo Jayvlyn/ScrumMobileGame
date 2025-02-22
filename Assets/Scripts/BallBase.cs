@@ -7,9 +7,11 @@ public class BallBase : MonoBehaviour
     [SerializeField] private Collider2D col;
     [SerializeField] private TrailRenderer trailRenderer;
     [SerializeField] private SpriteRenderer spriteRenderer;
+	[SerializeField] private SoundPicker ballHitSounds;
 
 	[Header("Enemy Stuff")]
 	[SerializeField] float baseDamage;
+	[SerializeField] SoundPicker enemyHitSounds;
 	LayerMask enemyLayer;
 
 	public Vector3 originalScale = new Vector3(0.3f, 0.3f, 0.3f);
@@ -52,6 +54,12 @@ public class BallBase : MonoBehaviour
 
 				Transform particles = Instantiate(Assets.i.enemyDamageParticles, collisionPoint, Quaternion.Euler(0, 0, angle));
 			}
+
+			if (enemyHitSounds) enemyHitSounds.PlayRandomSound();
+		}
+		else
+		{
+			if (ballHitSounds) ballHitSounds.PlayRandomSound();
 		}
 	}
 
