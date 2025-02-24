@@ -1065,10 +1065,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c5ff3e6d92fe6f4186b631441255ec5, type: 2}
   - {fileID: 11400000, guid: 811b4e827334da84899eaacdf744dafd, type: 2}
   - {fileID: 11400000, guid: 811b4e827334da84899eaacdf744dafd, type: 2}
-  timeBetweenSpawns: 1.5
-  timeBetweenRounds: 5
-  afterRoundTBSMultiplier: 1
-  afterRoundTBRMultiplier: 1
+  - {fileID: 11400000, guid: 5a8e924ab35c7284bbdc4c621e2139f8, type: 2}
+  timeBetweenSpawns: 1.75
+  timeBetweenRounds: 10
+  afterRoundTBSMultiplier: 0.6
+  afterRoundTBRMultiplier: 0.8
 --- !u!114 &198843417
 MonoBehaviour:
   m_ObjectHideFlags: 0
