@@ -1066,7 +1066,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 811b4e827334da84899eaacdf744dafd, type: 2}
   - {fileID: 11400000, guid: 811b4e827334da84899eaacdf744dafd, type: 2}
   - {fileID: 11400000, guid: 5a8e924ab35c7284bbdc4c621e2139f8, type: 2}
-  timeBetweenSpawns: 1.75
+  timeBetweenSpawns: 1.55
   timeBetweenRounds: 10
   afterRoundTBSMultiplier: 0.6
   afterRoundTBRMultiplier: 0.8
@@ -1495,6 +1495,7 @@ MonoBehaviour:
   flipSpeed: -1000
   activateKey: 100
   hinge: {fileID: 310518870}
+  sound: {fileID: 0}
 --- !u!61 &310518873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3179,6 +3180,7 @@ MonoBehaviour:
   flipSpeed: 1000
   activateKey: 97
   hinge: {fileID: 1134438118}
+  sound: {fileID: 0}
 --- !u!61 &1134438121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6885,6 +6887,7 @@ MonoBehaviour:
   ballPool: {fileID: 134120099}
   drain: {fileID: 1698331775}
   ballStart: {fileID: 1729972799}
+  pauseManager: {fileID: 0}
   maxPlayerHealth: 100
 --- !u!4 &2137939768
 Transform:
