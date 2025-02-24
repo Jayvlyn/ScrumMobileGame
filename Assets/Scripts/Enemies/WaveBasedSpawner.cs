@@ -6,15 +6,7 @@ using UnityEngine;
 
 public class WaveBasedSpawner : MonoBehaviour
 {
-	[CreateAssetMenu(fileName = "Enemy", menuName = "Enemy/WaveEnemy")]
-	internal class EnemySpawn : ScriptableObject
-	{
-		public int waveToSpawn;
-		public GameObject enemy;
-		public int num;
-	}
-
-	[SerializeField] List<EnemySpawn> enemySpawns = new List<EnemySpawn>();
+	[SerializeField] List<EnemyData> enemySpawns = new List<EnemyData>();
 	[SerializeField] float timeBetweenSpawns;
 	[SerializeField] float timeBetweenRounds;
 	[SerializeField] float afterRoundTBSMultiplier;
