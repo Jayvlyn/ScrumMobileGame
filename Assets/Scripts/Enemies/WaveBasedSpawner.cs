@@ -15,12 +15,15 @@ public class WaveBasedSpawner : MonoBehaviour
 
 	public IntEvent OnWaveIncrease;
 
+	public static bool gameBeat = false;
+
 	private bool alr;
 
 	private int numToSpawn;
 
 	private void Start()
 	{
+		gameBeat = false;
 		waveText.SetActive(true);
 		waveNum = 1;
 		ogTBS = timeBetweenSpawns;
@@ -36,7 +39,8 @@ public class WaveBasedSpawner : MonoBehaviour
 			if (timeBetweenSpawns >= 0) timeBetweenSpawns -= Time.deltaTime;
 			if (enemySpawns.Count <= 0)
 			{
-
+				gameBeat = true;
+				IncreaseRound();
 			}
 			else
 			{

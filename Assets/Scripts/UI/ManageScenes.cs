@@ -10,8 +10,15 @@ public class ManageScene : MonoBehaviour
 		SceneManager.LoadSceneAsync(sceneName);
 	}
 
+    public static void ChangeScn(string sceneName)
+    {
+        Time.timeScale = 1.0f;
+        PauseManager.isGamePaused = false;
+        SceneManager.LoadSceneAsync(sceneName);
+    }
 
-	public void QuitGame()
+
+    public void QuitGame()
 	{
 		//supposedly this is the prefered way to handle android application closing
 
