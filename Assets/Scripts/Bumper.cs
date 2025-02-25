@@ -9,6 +9,9 @@ public class Bumper : MonoBehaviour
     float bounceForce = 10;
     [SerializeField]
     AudioClip[] bumpSounds;
+    private SpriteRenderer spriteRenderer;
+    private MaterialPropertyBlock propertyBlock;
+    private static readonly int PulseTimeID = Shader.PropertyToID("_PulseTime");
 
     private AudioSource audioSource;
     private Animator animator;
@@ -17,6 +20,8 @@ public class Bumper : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        propertyBlock = new MaterialPropertyBlock();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -33,9 +38,22 @@ public class Bumper : MonoBehaviour
             if (bumpSounds.Length > 0) audioSource.PlayOneShot(bumpSounds[0]);
 
             GameManager.instance.AddScore(points);
-			NumberPopup.Create(transform.position, "+"+points);
+            NumberPopup.Create(transform.position, "+" + points);
 
-			//TODO: Play animation, add sounds.
-		}
+            TriggerPulse();
+
+            //TODO: Play animation, add sounds.
+        }
+    }
+
+    public void TriggerPulse()
+    {
+        float pulseStartTime = Time.time;
+
+        spriteRenderer.GetPropertyBlock(propertyBlock);
+
+        propertyBlock.SetFloat(PulseTimeID, pulseStartTime);
+
+        spriteRenderer.SetPropertyBlock(propertyBlock);
     }
 }

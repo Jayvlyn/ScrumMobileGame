@@ -51,3 +51,5 @@ MonoBehaviour:
   OnPlayerScoreUpdated: {fileID: 11400000, guid: 7a21c62bdee1b3c469cfcbddc375762a, type: 2}
   OnPlayerDeath: {fileID: 11400000, guid: 01b62190c59ff004bad9a0be5a71f676, type: 2}
   DoSceneChange: {fileID: 11400000, guid: 07bdf22c1df7e884489abb23b0816d27, type: 2}
+  OnPlayerHeal: {fileID: 11400000, guid: cfe17e01053e1d64eb21b0989cf79e5d, type: 2}
+  OnMagicPost: {fileID: 11400000, guid: 493c33e810584b14aa7ca473eb0515e6, type: 2}

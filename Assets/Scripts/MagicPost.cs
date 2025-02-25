@@ -4,13 +4,22 @@ public class MagicPost : MonoBehaviour
 {
     float durability;
     [SerializeField]
-    float maxDurability = 10;
+    float maxDurability = 5;
+
+    private int numCollisions;
 
     private void Start()
     {
         Deactivate();
     }
 
+    private void Update()
+    {
+        if (numCollisions > 0)
+        {
+            DamagePost(Time.deltaTime);
+        }
+    }
     public void DamagePost(float damage)
     {
         durability -= damage;
@@ -32,9 +41,18 @@ public class MagicPost : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<BallBase>()) 
+        if (collision.gameObject.GetComponent<BallBase>())
         {
-            DamagePost(2);
+            DamagePost(1);
+            numCollisions++;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<BallBase>())
+        {
+            numCollisions--;
         }
     }
 

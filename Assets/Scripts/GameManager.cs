@@ -1,3 +1,4 @@
+using GameEvents;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
 	public Drain drain;
 	[SerializeField] private Transform ballStart;
 
-	private int score = 0;
+    private int score = 0;
 	public int Score
 	{
 		get { return score; }
@@ -98,7 +99,13 @@ public class GameManager : MonoBehaviour
 		NumberPopup.Create(new Vector3(0, -6, 0), "-" + damage, default, false, false, NumberPopup.PopupType.TAKE_DAMAGE);
 	}
 
-	private void OnPlayerDeath()
+	public void HealPlayer(int heal)
+    {
+        PlayerHealth += heal;
+        //NumberPopup.Create(new Vector3(0, -6, 0), "+" + heal, default, false, false, NumberPopup.PopupType.HEAL);
+    }
+
+    private void OnPlayerDeath()
 	{
 		float restartTime = 3f;
 		StartCoroutine(PlayerDeathTimer(restartTime));

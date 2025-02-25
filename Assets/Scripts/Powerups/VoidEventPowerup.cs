@@ -1,7 +1,7 @@
 using UnityEngine;
 using GameEvents;
 
-public class EventPowerup : MonoBehaviour
+public class VoidEventPowerup : MonoBehaviour
 {
     [SerializeField] VoidEvent voidEvent;
 
