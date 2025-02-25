@@ -81,7 +81,7 @@ build GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o: CXX_COMPILER__game_
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGAApplication.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -91,7 +91,7 @@ build GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o: CXX_COMPILER__gam
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGAConfiguration.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -101,7 +101,7 @@ build GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o: CXX_COMPILER__game_RelWit
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGADebug.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -111,7 +111,7 @@ build GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o: CXX_COMPILER__game_RelWit
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGAEntry.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -121,7 +121,7 @@ build GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o: CXX_COMPILER__game_RelWit
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGAInput.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -131,7 +131,7 @@ build GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o: CXX_COMPILER__gam
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGAInputKeyEvent.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -141,7 +141,7 @@ build GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o: CXX_COMPILER__
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGAInputMotionEvent.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -151,7 +151,7 @@ build GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o: CXX_COMPILER__game
   DEFINES = -DEXTERNAL_GAME_ACTIVITY_CODE -Dgame_EXPORTS
   DEP_FILE = GameActivity\CMakeFiles\game.dir\UGASoftKeyboard.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity" -isystem C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/include
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   OBJECT_FILE_DIR = GameActivity\CMakeFiles\game.dir
   TARGET_COMPILE_PDB = GameActivity\CMakeFiles\game.dir\
@@ -165,10 +165,10 @@ build GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o: CXX_COMPILER__game
 #############################################
 # Link the shared library C:\Unity Projects\ScrumMobileGame\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\685p1g48\obj\arm64-v8a\libgame.so
 
-build C$:/Unity$ Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/685p1g48/obj/arm64-v8a/libgame.so: CXX_SHARED_LIBRARY_LINKER__game_RelWithDebInfo GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o | C$:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/libs/android.arm64-v8a/libgame-activity_static.a
+build C$:/Unity$ Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/685p1g48/obj/arm64-v8a/libgame.so: CXX_SHARED_LIBRARY_LINKER__game_RelWithDebInfo GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o | C$:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/libs/android.arm64-v8a/libgame-activity_static.a
   LANGUAGE_COMPILE_FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG
   LINK_FLAGS = -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined
-  LINK_LIBRARIES = -landroid  C:/Users/leona/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/libs/android.arm64-v8a/libgame-activity_static.a  -llog   -latomic -lm
+  LINK_LIBRARIES = -landroid  C:/Users/jacob/.gradle/caches/transforms-3/4533d298259fc52a43021fce53f5e4a9/transformed/jetified-games-activity-3.0.5/prefab/modules/game-activity_static/libs/android.arm64-v8a/libgame-activity_static.a  -llog   -latomic -lm
   OBJECT_DIR = GameActivity\CMakeFiles\game.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -219,7 +219,7 @@ build FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o: CXX_COM
   DEFINES = -DEXTERNAL_FRAME_PACING_CODE -Dswappywrapper_EXPORTS
   DEP_FILE = FramePacing\CMakeFiles\swappywrapper.dir\UnitySwappyWrapper.cpp.o.d
   FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG -fPIC
-  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing" -isystem C:/Users/leona/.gradle/caches/transforms-3/268849a49ea9eb2bba6f4e0ac95bfd63/transformed/jetified-games-frame-pacing-1.10.0/prefab/modules/swappy_static/include
+  INCLUDES = -I"C:/Unity Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing" -isystem C:/Users/jacob/.gradle/caches/transforms-3/268849a49ea9eb2bba6f4e0ac95bfd63/transformed/jetified-games-frame-pacing-1.10.0/prefab/modules/swappy_static/include
   OBJECT_DIR = FramePacing\CMakeFiles\swappywrapper.dir
   OBJECT_FILE_DIR = FramePacing\CMakeFiles\swappywrapper.dir
   TARGET_COMPILE_PDB = FramePacing\CMakeFiles\swappywrapper.dir\
@@ -233,10 +233,10 @@ build FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o: CXX_COM
 #############################################
 # Link the shared library C:\Unity Projects\ScrumMobileGame\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\685p1g48\obj\arm64-v8a\libswappywrapper.so
 
-build C$:/Unity$ Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/685p1g48/obj/arm64-v8a/libswappywrapper.so: CXX_SHARED_LIBRARY_LINKER__swappywrapper_RelWithDebInfo FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o | C$:/Users/leona/.gradle/caches/transforms-3/268849a49ea9eb2bba6f4e0ac95bfd63/transformed/jetified-games-frame-pacing-1.10.0/prefab/modules/swappy_static/libs/android.arm64-v8a_API23_NDK23_cpp_shared_Release/libswappy.a
+build C$:/Unity$ Projects/ScrumMobileGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/685p1g48/obj/arm64-v8a/libswappywrapper.so: CXX_SHARED_LIBRARY_LINKER__swappywrapper_RelWithDebInfo FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o | C$:/Users/jacob/.gradle/caches/transforms-3/268849a49ea9eb2bba6f4e0ac95bfd63/transformed/jetified-games-frame-pacing-1.10.0/prefab/modules/swappy_static/libs/android.arm64-v8a_API23_NDK23_cpp_shared_Release/libswappy.a
   LANGUAGE_COMPILE_FLAGS = -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -Wall -Wextra -pedantic -Werror -O2 -g -DNDEBUG
   LINK_FLAGS = -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined -Wl,--wrap=__android_log_print
-  LINK_LIBRARIES = -landroid  C:/Users/leona/.gradle/caches/transforms-3/268849a49ea9eb2bba6f4e0ac95bfd63/transformed/jetified-games-frame-pacing-1.10.0/prefab/modules/swappy_static/libs/android.arm64-v8a_API23_NDK23_cpp_shared_Release/libswappy.a  -llog   -latomic -lm
+  LINK_LIBRARIES = -landroid  C:/Users/jacob/.gradle/caches/transforms-3/268849a49ea9eb2bba6f4e0ac95bfd63/transformed/jetified-games-frame-pacing-1.10.0/prefab/modules/swappy_static/libs/android.arm64-v8a_API23_NDK23_cpp_shared_Release/libswappy.a  -llog   -latomic -lm
   OBJECT_DIR = FramePacing\CMakeFiles\swappywrapper.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
