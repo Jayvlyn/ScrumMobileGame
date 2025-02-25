@@ -4514,7 +4514,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -13819,6 +13819,7 @@ MonoBehaviour:
   drain: {fileID: 1239750982}
   ballStart: {fileID: 1057087206}
   pauseManager: {fileID: 750392754}
+  gameLost: 0
   maxPlayerHealth: 100
 --- !u!4 &2137939768
 Transform:
