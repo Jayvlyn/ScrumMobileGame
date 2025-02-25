@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private Transform ballStart;
 	[SerializeField] private PauseManager pauseManager;
 
+	public bool gameLost = false;
+
     private int score = 0;
 	public int Score
 	{
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
+		gameLost = false;
 		instance = this;
 		OnLevelStart();
 	}
@@ -108,6 +111,7 @@ public class GameManager : MonoBehaviour
 
     private void OnPlayerDeath()
 	{
+		gameLost = true;
 		float restartTime = 3f;
 		StartCoroutine(PlayerDeathTimer(restartTime));
 	}

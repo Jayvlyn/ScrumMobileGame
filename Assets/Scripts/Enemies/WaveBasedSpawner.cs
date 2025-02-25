@@ -33,41 +33,41 @@ public class WaveBasedSpawner : MonoBehaviour
 	}
 
 	private void Update()
-	{
-		Debug.Log(waveNum);
-		if (timeBetweenSpawns >= 0) timeBetweenSpawns -= Time.deltaTime;
-		if (enemySpawns.Count <= 0)
+	{ 
+		if(!GameManager.instance.gameLost)
 		{
-
-		}
-		else
-		{
-
-			if (numToSpawn <= 0)
+			if (timeBetweenSpawns >= 0) timeBetweenSpawns -= Time.deltaTime;
+			if (enemySpawns.Count <= 0)
 			{
-				if (enemySpawns.Count > 1) numToSpawn = enemySpawns[1].num;
-				enemySpawns.RemoveAt(0);
+
+			}
+			else
+			{
+				if (numToSpawn <= 0)
+				{
+					if (enemySpawns.Count > 1) numToSpawn = enemySpawns[1].num;
+					enemySpawns.RemoveAt(0);
+				}
+
+				if (enemySpawns.Count <= 0) { }
+				else if (timeBetweenSpawns <= 0 && enemySpawns[0].waveToSpawn == waveNum)
+				{
+					Instantiate(enemySpawns[0].enemy, transform);
+					numToSpawn--;
+					timeBetweenSpawns = ogTBS;
+				}
+				else if (enemySpawns[0].waveToSpawn != waveNum && !alr)
+				{
+					alr = true;
+					Invoke("IncreaseRound", timeBetweenRounds);
+				}
 			}
 
-			if (enemySpawns.Count <= 0) { }
-			else if (timeBetweenSpawns <= 0 && enemySpawns[0].waveToSpawn == waveNum)
-			{
-				Instantiate(enemySpawns[0].enemy, transform);
-				numToSpawn--;
-				timeBetweenSpawns = ogTBS;
-			}
-			else if (enemySpawns[0].waveToSpawn != waveNum && !alr)
-			{
-				alr = true;
-				Debug.Log("invoked");
-				Invoke("IncreaseRound", timeBetweenRounds);
-			}
 		}
 	}
 
 	private void IncreaseRound()
 	{
-		Debug.Log("increased");
 		waveNum++;
 		OnWaveIncrease.Raise(waveNum);
 		ogTBS = ogTBS * afterRoundTBSMultiplier;
