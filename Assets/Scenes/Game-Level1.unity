@@ -844,7 +844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2736,8 +2736,8 @@ HingeJoint2D:
   m_BreakTorque: 10000
   m_BreakAction: 0
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -0.45, y: -0.05}
-  m_ConnectedAnchor: {x: -1.5079694, y: -4.927137}
+  m_Anchor: {x: -0.31, y: 0.01}
+  m_ConnectedAnchor: {x: -1.3557291, y: -4.9319253}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4786,8 +4786,8 @@ HingeJoint2D:
   m_BreakTorque: 10000
   m_BreakAction: 0
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -0.45, y: -0.05}
-  m_ConnectedAnchor: {x: 0.45482203, y: -4.840399}
+  m_Anchor: {x: -0.31, y: -0.02}
+  m_ConnectedAnchor: {x: 0.3391044, y: -4.9247165}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -7122,7 +7122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -9581,7 +9581,7 @@ AudioSource:
   m_GameObject: {fileID: 1241322944}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8184922413461834288, guid: 29177596a2be89a44835681dc21eebf2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4bcb8944421ed1949a118dc6d55be2d8, type: 3}
   m_Resource: {fileID: 8300000, guid: 4bcb8944421ed1949a118dc6d55be2d8, type: 3}
   m_PlayOnAwake: 0
@@ -9678,7 +9678,7 @@ AudioSource:
   m_GameObject: {fileID: 1241322944}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8184922413461834288, guid: 29177596a2be89a44835681dc21eebf2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 66a6b2d29b5ed2543bc6bba38ce53a81, type: 3}
   m_Resource: {fileID: 8300000, guid: 66a6b2d29b5ed2543bc6bba38ce53a81, type: 3}
   m_PlayOnAwake: 0
