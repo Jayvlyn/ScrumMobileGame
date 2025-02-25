@@ -31,7 +31,6 @@ public class EnemyBase : MonoBehaviour
 	private Rigidbody2D rb;
 	private Collider2D alrCollided;
 
-
 	private LayerMask drainLm;
 
 	private void Start()
