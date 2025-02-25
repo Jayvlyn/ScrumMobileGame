@@ -58,7 +58,8 @@ public class EnemyBase : MonoBehaviour
 
 		if(collision.gameObject.layer == drainLm.value)
 		{
-			GameManager.instance.DamagePlayer(damage);
+			if(GameManager.instance != null)
+				GameManager.instance.DamagePlayer(damage);
 		}
 	}
 
