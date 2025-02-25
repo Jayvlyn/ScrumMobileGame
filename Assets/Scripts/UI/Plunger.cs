@@ -76,7 +76,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		}
 
 		Debug.Log(Vector2.Distance(transform.position, rt.position) * stretchAudioPitchScale);
-		plungerPullAudioSource.pitch = Mathf.Clamp((stretchAudioPitchScale * Vector2.Distance(transform.position, rt.position))+1, 1f, 2.8f);
+		plungerPullAudioSource.pitch = Mathf.Clamp(( stretchAudioPitchScale * Vector2.Distance(transform.position, rt.position))+1, 1f, 2.8f);
     }
 
 	public void OnEndDrag(PointerEventData eventData)
