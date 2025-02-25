@@ -18,13 +18,13 @@ public class PauseManager : MonoBehaviour
         {
             uiAnimator.Play(closeAnim);
             StartCoroutine(DisablePanelAfterAnimation());
-            //UnpauseGame();
+            UnpauseGame();
         }
         else
         {
             uiPanel.SetActive(true);
             uiAnimator.Play(openAnim);
-            //PauseGame();
+            PauseGame();
         }
 
         isOpen = !isOpen;
