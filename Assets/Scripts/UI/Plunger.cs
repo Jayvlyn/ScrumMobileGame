@@ -15,6 +15,10 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 	[Range(1,10)] public float power = 10;
 
+	public AudioSource plungerPullAudioSource;
+	public AudioSource plungerReleaseAudioSource;
+	public float stretchAudioPitchScale = 0.5f;
+
 	public void OnBeginDrag(PointerEventData eventData)
 	{
 		var canvas = FindInParents<Canvas>(gameObject);
@@ -46,6 +50,8 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		GetComponent<Image>().enabled = false;
 
 		SetDraggedPosition(eventData);
+
+		plungerPullAudioSource.Play();
 	}
 
 	public void OnDrag(PointerEventData data)
@@ -68,11 +74,15 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 			rt.position = new Vector3(gameObject.transform.position.x, newYPos);
 			rt.rotation = m_DraggingPlane.rotation;
 		}
-	}
+
+		Debug.Log(Vector2.Distance(transform.position, rt.position) * stretchAudioPitchScale);
+		plungerPullAudioSource.pitch = Mathf.Clamp((stretchAudioPitchScale * Vector2.Distance(transform.position, rt.position))+1, 1f, 2.8f);
+    }
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
-
+		plungerPullAudioSource.Stop();
+		plungerReleaseAudioSource.Play();
 		float outputForce = (gameObject.transform.position.y - m_DraggingIcon.transform.position.y) * power;
 
 		onPlungerReleased.Raise(outputForce);
