@@ -57,13 +57,14 @@ public class BallBase : MonoBehaviour
 
 			if (enemyHitSounds) enemyHitSounds.PlayRandomSound();
 		}
-		else
-		{
-			if (ballHitSounds) ballHitSounds.PlayRandomSound();
-		}
 	}
 
-	public void OnBallSplit()
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (ballHitSounds) ballHitSounds.PlayRandomSound();
+    }
+
+    public void OnBallSplit()
     {
         GameObject ballGameObject = GameManager.instance.ballPool.ActivateObject();
 
