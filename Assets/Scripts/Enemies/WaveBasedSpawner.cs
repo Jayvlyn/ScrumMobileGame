@@ -37,7 +37,7 @@ public class WaveBasedSpawner : MonoBehaviour
 		if(!GameManager.instance.gameLost)
 		{
 			if (timeBetweenSpawns >= 0) timeBetweenSpawns -= Time.deltaTime;
-			if (enemySpawns.Count <= 0)
+			if (enemySpawns.Count <= 0 && !gameBeat)
 			{
 				gameBeat = true;
 				IncreaseRound();
