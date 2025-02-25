@@ -12,7 +12,9 @@ public class BallBase : MonoBehaviour
 	[Header("Enemy Stuff")]
 	[SerializeField] float baseDamage;
 	[SerializeField] SoundPicker enemyHitSounds;
+	[SerializeField] SoundPicker pickupPowerupSounds;
 	LayerMask enemyLayer;
+	LayerMask pickupLayer;
 
 	public Vector3 originalScale = new Vector3(0.3f, 0.3f, 0.3f);
 	public Color originalColor = new Color(1, 1, 1, 1);
@@ -29,6 +31,7 @@ public class BallBase : MonoBehaviour
 	{
 		rb.mass = 1.0f;
 		enemyLayer = LayerMask.NameToLayer("Enemy");
+		pickupLayer = LayerMask.NameToLayer("Pickup");
 		trailRenderer.startWidth = transform.localScale.x;
 
 		spriteRenderer.color = originalColor;
@@ -56,6 +59,10 @@ public class BallBase : MonoBehaviour
 			}
 
 			if (enemyHitSounds) enemyHitSounds.PlayRandomSound();
+		}
+		else if (collision.gameObject.layer == pickupLayer)
+		{
+			if (pickupPowerupSounds) pickupPowerupSounds.PlayRandomSound();
 		}
 	}
 

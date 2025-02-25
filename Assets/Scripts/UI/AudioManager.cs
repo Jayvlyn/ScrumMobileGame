@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
+    public AudioSource audioSource;
+
     [SerializeField] public AudioMixer audioMixer;
 
     [SerializeField] private Slider masterSlider;

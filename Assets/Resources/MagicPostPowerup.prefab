@@ -137,4 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152f346df6c63a24f900ed8487d0e270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupSound: {fileID: 8300000, guid: 106e5c104c62545469d59086165c5c6c, type: 3}
   voidEvent: {fileID: 11400000, guid: 493c33e810584b14aa7ca473eb0515e6, type: 2}

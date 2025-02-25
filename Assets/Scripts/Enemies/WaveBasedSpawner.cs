@@ -1,3 +1,4 @@
+using GameEvents;
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEditor;
@@ -13,6 +14,9 @@ public class WaveBasedSpawner : MonoBehaviour
 	[SerializeField] float afterRoundTBRMultiplier;
 	private float ogTBS;
 	private int waveNum;
+	public GameObject waveText;
+
+	public IntEvent OnWaveIncrease;
 
 	private bool alr;
 
@@ -20,14 +24,17 @@ public class WaveBasedSpawner : MonoBehaviour
 
 	private void Start()
 	{
+		waveText.SetActive(true);
 		waveNum = 1;
 		ogTBS = timeBetweenSpawns;
 		numToSpawn = enemySpawns[0].num;
 		alr = false;
+		OnWaveIncrease.Raise(waveNum);
 	}
 
 	private void Update()
 	{
+		Debug.Log(waveNum);
 		if (timeBetweenSpawns >= 0) timeBetweenSpawns -= Time.deltaTime;
 		if (enemySpawns.Count <= 0)
 		{
@@ -52,6 +59,7 @@ public class WaveBasedSpawner : MonoBehaviour
 			else if (enemySpawns[0].waveToSpawn != waveNum && !alr)
 			{
 				alr = true;
+				Debug.Log("invoked");
 				Invoke("IncreaseRound", timeBetweenRounds);
 			}
 		}
@@ -59,7 +67,9 @@ public class WaveBasedSpawner : MonoBehaviour
 
 	private void IncreaseRound()
 	{
+		Debug.Log("increased");
 		waveNum++;
+		OnWaveIncrease.Raise(waveNum);
 		ogTBS = ogTBS * afterRoundTBSMultiplier;
 		timeBetweenRounds = timeBetweenRounds * afterRoundTBRMultiplier;
 		alr = false;

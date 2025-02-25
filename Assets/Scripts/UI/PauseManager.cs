@@ -10,7 +10,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] public string openAnim;
     [SerializeField] public string closeAnim;
 
-    public bool isGamePaused = false;
+    public static bool isGamePaused = false;
 
     public void ToggleUI()
     {

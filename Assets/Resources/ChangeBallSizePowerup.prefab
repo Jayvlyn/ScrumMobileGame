@@ -137,5 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d08708b9a68dd44b9ccb6ed7ba71f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupSound: {fileID: 8300000, guid: 204725a669402fd439073d5131dc9192, type: 3}
   sizeToIncrease: 2
   time: 5

@@ -5,6 +5,8 @@ public class ManageScene : MonoBehaviour
 {
    public void ChangeScene(string sceneName)
 	{
+		Time.timeScale = 1.0f;
+		PauseManager.isGamePaused = false;
 		SceneManager.LoadSceneAsync(sceneName);
 	}
 

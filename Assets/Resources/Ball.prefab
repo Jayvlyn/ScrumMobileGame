@@ -59,6 +59,7 @@ MonoBehaviour:
   ballHitSounds: {fileID: 8569159316907051647}
   baseDamage: 100
   enemyHitSounds: {fileID: 5960309569985030680}
+  pickupPowerupSounds: {fileID: 0}
   originalScale: {x: 0.3, y: 0.3, z: 0.3}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
   bigColor: {r: 0.27450982, g: 0.63529414, b: 0.26666668, a: 1}
