@@ -8,6 +8,7 @@ public class FlipperController : MonoBehaviour
     [Tooltip("Key to control this flipper")]
     [SerializeField] private KeyCode activateKey = KeyCode.A;
 	[SerializeField] private HingeJoint2D hinge;
+	[SerializeField] SoundPicker sound;
 
 	private void Start()
 	{
@@ -33,6 +34,7 @@ public class FlipperController : MonoBehaviour
 	public void Activate()
     {
 		SetMotorSpeed(-flipSpeed);
+		if(sound) sound.PlayRandomSound();
     }
 
 	/// <summary>

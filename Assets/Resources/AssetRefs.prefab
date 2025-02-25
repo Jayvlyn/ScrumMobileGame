@@ -53,3 +53,7 @@ MonoBehaviour:
   DoSceneChange: {fileID: 11400000, guid: 07bdf22c1df7e884489abb23b0816d27, type: 2}
   OnPlayerHeal: {fileID: 11400000, guid: cfe17e01053e1d64eb21b0989cf79e5d, type: 2}
   OnMagicPost: {fileID: 11400000, guid: 493c33e810584b14aa7ca473eb0515e6, type: 2}
+  enemyDamageParticles: {fileID: 5907546885511087240, guid: 0ab766f893265ae4d9913a2696defa94, type: 3}
+  playerDamageParticles: {fileID: 5907546885511087240, guid: 0a67917d51dbd474eadddba748c8cff9, type: 3}
+  circleBumperParticles: {fileID: 7277434656789682361, guid: 2b824ebbff9b57140b349f33deef2791, type: 3}
+  

@@ -7,31 +7,63 @@ public class BallBase : MonoBehaviour
     [SerializeField] private Collider2D col;
     [SerializeField] private TrailRenderer trailRenderer;
     [SerializeField] private SpriteRenderer spriteRenderer;
+	[SerializeField] private SoundPicker ballHitSounds;
 
 	[Header("Enemy Stuff")]
-	[SerializeField] float damage;
+	[SerializeField] float baseDamage;
+	[SerializeField] SoundPicker enemyHitSounds;
 	LayerMask enemyLayer;
 
-    public Vector3 originalScale = new Vector3(0.3f, 0.3f, 0.3f);
-    private float sizeResetTimer = 0;
+	public Vector3 originalScale = new Vector3(0.3f, 0.3f, 0.3f);
+	public Color originalColor = new Color(1, 1, 1, 1);
+	public Color bigColor = new Color(0, 1, 0, 1);
+
+	public Color originalTrailColor = new Color(0, 1, 1, 1);
+	public Color bigTrailColor = new Color(0, 1, 1, 1);
+
+	private float sizeResetTimer = 0;
     private Coroutine sizeReset;
     private bool inPowerUp = false;
 
-	private void Start()
+    private void Start()
 	{
+		rb.mass = 1.0f;
 		enemyLayer = LayerMask.NameToLayer("Enemy");
 		trailRenderer.startWidth = transform.localScale.x;
+
+		spriteRenderer.color = originalColor;
+		trailRenderer.startColor = originalTrailColor;
+		UpdateTrailState();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.layer == enemyLayer)
 		{
+			int damage = Mathf.RoundToInt(rb.mass * (rb.linearVelocity.magnitude > 1 ? rb.linearVelocity.magnitude : 1) * baseDamage);
 			collision.GetComponent<EnemyBase>().ApplyDamage(damage);
+
+			// PARTICLE EFFECT
+			if(OptionsPanel.particlesEnabled)
+			{
+				Vector2 collisionPoint = collision.ClosestPoint(transform.position);
+
+				Vector2 direction = (transform.position - (Vector3)collisionPoint).normalized;
+
+				float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+				Transform particles = Instantiate(Assets.i.enemyDamageParticles, collisionPoint, Quaternion.Euler(0, 0, angle));
+			}
+
+			if (enemyHitSounds) enemyHitSounds.PlayRandomSound();
+		}
+		else
+		{
+			if (ballHitSounds) ballHitSounds.PlayRandomSound();
 		}
 	}
 
-    public void OnBallSplit()
+	public void OnBallSplit()
     {
         GameObject ballGameObject = GameManager.instance.ballPool.ActivateObject();
 
@@ -44,37 +76,96 @@ public class BallBase : MonoBehaviour
         ball.rb.linearVelocity = rb.linearVelocity;
     }
 
-    public void ChangeScale(float newSize, float duration)
-    {
-        if (!inPowerUp)
-        {
-            inPowerUp = true;
-            transform.localScale *= newSize;
-        }
-        else if (sizeReset != null)
-        {
-            StopCoroutine(sizeReset);
-        }
-        sizeReset = StartCoroutine(ResetScaleAfterTime(duration));
-        trailRenderer.startWidth = transform.localScale.x;
+	public void ChangeScale(float newSize, float duration)
+	{
+		if (!inPowerUp)
+		{
+			inPowerUp = true;
+			//transform.localScale *= newSize;
+			StartCoroutine(LerpScale(originalScale * newSize, 2f));
+			rb.mass *= newSize;
+		}
+		else if (sizeReset != null)
+		{
+			StopCoroutine(sizeReset);
+		}
+		sizeReset = StartCoroutine(ResetScaleAfterTime(duration));
 	}
 
-    private IEnumerator ResetScaleAfterTime(float duration)
-    {
-        sizeResetTimer = duration;
-        while (sizeResetTimer > 0)
-        {
-            sizeResetTimer -= Time.deltaTime;
-            yield return null;
-        }
-        ResetScale();
-    }
+	private IEnumerator ResetScaleAfterTime(float duration)
+	{
+		sizeResetTimer = duration;
+		while (sizeResetTimer > 0)
+		{
+			sizeResetTimer -= Time.deltaTime;
+			yield return null;
+		}
+		ResetScale();
+	}
 
-    private void ResetScale()
-    {
-        inPowerUp = false;
-        transform.localScale = originalScale;
+	private void ResetScale()
+	{
+		inPowerUp = false;
+		//transform.localScale = originalScale;
+		StartCoroutine(LerpScale(originalScale, 2f));
 		trailRenderer.startWidth = transform.localScale.x;
+		rb.mass = 1;
 	}
 
+
+	private IEnumerator LerpScale(Vector3 newScale, float lerpTime)
+	{
+		Vector3 startScale = transform.localScale;
+
+		Color startColor = spriteRenderer.color;
+		Color startTrailColor = trailRenderer.startColor;
+		Color targetColor;
+		Color targetTrailColor;
+		if (newScale == originalScale)
+		{
+			targetColor = originalColor;
+			targetTrailColor = originalTrailColor;
+
+		}
+		else
+		{
+			targetColor = bigColor;
+			targetTrailColor = bigTrailColor;
+		}
+
+
+		float elapsedTime = 0;
+		while (elapsedTime < lerpTime)
+		{
+			elapsedTime += Time.deltaTime;
+
+			transform.localScale = Vector3.Lerp(startScale, newScale, elapsedTime / lerpTime);
+			trailRenderer.startWidth = transform.localScale.x;
+
+			trailRenderer.startColor = Color.Lerp(startTrailColor, targetTrailColor, elapsedTime / lerpTime);
+			spriteRenderer.color = Color.Lerp(startColor, targetColor, elapsedTime / lerpTime);
+
+			yield return null;
+		}
+		transform.localScale = newScale;
+		trailRenderer.startWidth = transform.localScale.x;
+		trailRenderer.startColor = targetTrailColor;
+
+		spriteRenderer.color = targetColor;
+	}
+
+	public void UpdateTrailState(int toggleState = -1)
+    {
+		if(toggleState == -1)
+			trailRenderer.enabled = OptionsPanel.trailsEnabled;
+
+		else if (toggleState == 1)
+		{
+			trailRenderer.enabled = true;
+		}
+		else
+		{
+			trailRenderer.enabled = false;
+		}
+    }
 }

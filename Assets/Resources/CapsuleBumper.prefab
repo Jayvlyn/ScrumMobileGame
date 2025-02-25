@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6767371335016871950}
   - component: {fileID: 9014209110291486885}
   - component: {fileID: 2855921299359293112}
+  - component: {fileID: 5852724730155646684}
   m_Layer: 0
   m_Name: CapsuleBumper
   m_TagString: Untagged
@@ -165,10 +166,10 @@ AudioSource:
   m_GameObject: {fileID: 3431315273431345285}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8184922413461834288, guid: 29177596a2be89a44835681dc21eebf2, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -289,4 +290,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 5
   bounceForce: 1
-  bumpSounds: []
+  particles: {fileID: 0}
+  sound: {fileID: 5852724730155646684}
+--- !u!114 &5852724730155646684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431315273431345285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2318a62cb60f94f8a474622cd8b8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 539c0bde91bd1954193f1ee257090e83, type: 3}
+  - {fileID: 8300000, guid: eac9921b2b0b5944da22a3975b83b6ae, type: 3}
+  audioSource: {fileID: 6767371335016871950}
